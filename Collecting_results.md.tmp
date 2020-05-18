@@ -1,0 +1,253 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing code_cell rendered" markdown="1">
+<div class="input">
+
+```python
+import qcportal as ptl
+from qcsubmit.results import OptimizationCollectionResult
+
+client = ptl.FractalClient()
+
+client.list_collections('OptimizationDataset')
+```
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>tagline</th>
+    </tr>
+    <tr>
+      <th>collection</th>
+      <th>name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="18" valign="top">OptimizationDataset</th>
+      <th>FDA Optimization Dataset 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>JGI Metabolite Set 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>Kinase Inhibitors: WBO Distributions</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Discrepancy Benchmark 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Full Optimization Benchmark 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Gen 2 Opt Set 1 Roche</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Gen 2 Opt Set 2 Coverage</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Gen 2 Opt Set 3 Pfizer Discrepancy</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Gen 2 Opt Set 4 eMolecules Discrepancy</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Gen 2 Opt Set 5 Bayer</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF NCI250K Boron 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Optimization Set 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF Primary Optimization Benchmark 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>OpenFF VEHICLe Set 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>PEI</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>Pfizer Discrepancy Optimization Dataset 1</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>QM8-T</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>SMIRNOFF Coverage Set 1</th>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered" markdown="1">
+<div class="input">
+
+```python
+ds = client.get_collection('OptimizationDataset', "OpenFF Full Optimization Benchmark 1")
+```
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered" markdown="1">
+<div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Here we want to pull down a few optimizations from this dataset with their full trajectories.
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" markdown="1">
+<div class="input">
+
+```python
+%time result = OptimizationCollectionResult.from_server(client=client, dataset_name="OpenFF Full Optimization Benchmark 1", spec_name="default", include_trajectory=True, subset=list(ds.data.records.keys())[:20])
+
+```
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>requested molecules 743
+requested results 743
+CPU times: user 3.02 s, sys: 495 ms, total: 3.52 s
+Wall time: 1min 14s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered" markdown="1">
+<div class="input">
+
+```python
+# view an optimization
+result.collection["CO/N=C/1\\C[N@](C[C@H]1C[NH3+])c2c(cc3c(=O)c(cn(c3n2)C4CC4)C(=O)[O-])F"].entries[2].get_final_molecule()
+```
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+
+
+
+<div id="194b74d0-9a66-42ed-a56e-78b84d9d8dd7"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#194b74d0-9a66-42ed-a56e-78b84d9d8dd7');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "ebd5ce6a521c4cf2972d9b4b63c72fad", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered" markdown="1">
+<div class="input">
+
+```python
+
+```
+
+</div>
+
+</div>
+
+
