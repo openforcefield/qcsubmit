@@ -1,0 +1,3035 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Datasets - QCSubmit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qcsubmit.datasets.BasicDataset" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="QCSubmit" aria-label="QCSubmit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QCSubmit
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Datasets
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="QCSubmit" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QCSubmit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Notebooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Collecting_results/" title="Collecting Results" class="md-nav__link">
+      Collecting Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../factories/" title="Factories" class="md-nav__link">
+      Factories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Datasets
+      </label>
+    
+    <a href="./" title="Datasets" class="md-nav__link md-nav__link--active">
+      Datasets
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset" class="md-nav__link">
+    BasicDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.components" class="md-nav__link">
+    components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.filtered" class="md-nav__link">
+    filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.molecules" class="md-nav__link">
+    molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_components" class="md-nav__link">
+    n_components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_filtered" class="md-nav__link">
+    n_filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_molecules" class="md-nav__link">
+    n_molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_records" class="md-nav__link">
+    n_records
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.add_molecule" class="md-nav__link">
+    add_molecule()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.coverage_report" class="md-nav__link">
+    coverage_report()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.export_dataset" class="md-nav__link">
+    export_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.filter_molecules" class="md-nav__link">
+    filter_molecules()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.molecules_to_file" class="md-nav__link">
+    molecules_to_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult" class="md-nav__link">
+    ComponentResult
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_conformers" class="md-nav__link">
+    n_conformers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_filtered" class="md-nav__link">
+    n_filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_molecules" class="md-nav__link">
+    n_molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.add_molecule" class="md-nav__link">
+    add_molecule()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.filter_molecule" class="md-nav__link">
+    filter_molecule()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry" class="md-nav__link">
+    DatasetEntry
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry" class="md-nav__link">
+    FilterEntry
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset" class="md-nav__link">
+    OptimizationDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.get_qc_spec" class="md-nav__link">
+    get_qc_spec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset" class="md-nav__link">
+    TorsiondriveDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../procedures/" title="Procedures" class="md-nav__link">
+      Procedures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Workflow Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Workflow Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_component/" title="Base Component" class="md-nav__link">
+      Base Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filters/" title="Filters" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conformer_generation/" title="Conformer Generation" class="md-nav__link">
+      Conformer Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state_enumeration/" title="State Enumeration" class="md-nav__link">
+      State Enumeration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset" class="md-nav__link">
+    BasicDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.components" class="md-nav__link">
+    components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.filtered" class="md-nav__link">
+    filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.molecules" class="md-nav__link">
+    molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_components" class="md-nav__link">
+    n_components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_filtered" class="md-nav__link">
+    n_filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_molecules" class="md-nav__link">
+    n_molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.n_records" class="md-nav__link">
+    n_records
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.add_molecule" class="md-nav__link">
+    add_molecule()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.coverage_report" class="md-nav__link">
+    coverage_report()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.export_dataset" class="md-nav__link">
+    export_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.filter_molecules" class="md-nav__link">
+    filter_molecules()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.molecules_to_file" class="md-nav__link">
+    molecules_to_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.BasicDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult" class="md-nav__link">
+    ComponentResult
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_conformers" class="md-nav__link">
+    n_conformers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_filtered" class="md-nav__link">
+    n_filtered
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.n_molecules" class="md-nav__link">
+    n_molecules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.add_molecule" class="md-nav__link">
+    add_molecule()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.ComponentResult.filter_molecule" class="md-nav__link">
+    filter_molecule()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry" class="md-nav__link">
+    DatasetEntry
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.DatasetEntry.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry" class="md-nav__link">
+    FilterEntry
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry.9595init9595" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.FilterEntry.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset" class="md-nav__link">
+    OptimizationDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.get_qc_spec" class="md-nav__link">
+    get_qc_spec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.OptimizationDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset" class="md-nav__link">
+    TorsiondriveDataset
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset.9595json_encoder9595" class="md-nav__link">
+    __json_encoder__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.datasets.TorsiondriveDataset.submit" class="md-nav__link">
+    submit()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/openforcefield/qcsubmit/edit/master/docs/datasets.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Datasets</h1>
+                
+                <h2 id="qcsubmit.datasets.BasicDataset"><code class="codehilite"><span class="n">BasicDataset</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>The general qcfractal dataset class which contains all of the molecules and information about them prior to
+submission.</p>
+<p>The class is a simple holder of the dataset and information about it and can do simple checks on the data before
+submitting it such as ensuring that the molecules have cmiles information
+and a unique index to be identified by.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The molecules in this dataset are all expanded so that different conformers are unique submissions.</p>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.components"><code class="codehilite"><span class="n">components</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]]</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.components" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>Gather the details of the components that were ran during the creation of this dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List[Dict[str, Union[str, Dict[str, str]]]]</code></td>
+<td>A list of dictionaries containing information about the components ran during the generation of the dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.filtered"><code class="codehilite"><span class="n">filtered</span><span class="p">:</span> <span class="n">Molecule</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.filtered" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>A generator for the molecules that have been filtered.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Molecule</code></td>
+<td>offmol: A molecule representation created from the filtered molecule lists</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Modifying the molecule will have no effect on the data stored.</p>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.molecules"><code class="codehilite"><span class="n">molecules</span><span class="p">:</span> <span class="n">Molecule</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.molecules" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>A generator that creates an openforcefield.topology.Molecule one by one from the dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Molecule</code></td>
+<td>The instance of the molecule from the dataset.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Editing the molecule will not effect the data stored in the dataset as it is immutable.</p>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.n_components"><code class="codehilite"><span class="n">n_components</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.n_components" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>Return the amount of components that have been ran during generating the dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of components that were ran while generating the dataset.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.n_filtered"><code class="codehilite"><span class="n">n_filtered</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.n_filtered" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>Calculate the total number of molecules filtered by the components used in a workflow to create this dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>filtered: The total number of molecules filtered by components.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.n_molecules"><code class="codehilite"><span class="n">n_molecules</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.n_molecules" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>Calculate the total number of unique molecules which will be submitted as part of this dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of molecules in the dataset.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The number of molecule records submitted is not always the same as the amount of records created, this can
+also be checked using <code>n_records</code>. Here we give the number of unique molecules not excluding conformers.
+* see also [n_conformers][qcsubmit.datasets.BasicDataset.n_conformers]</p>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.n_records"><code class="codehilite"><span class="n">n_records</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.n_records" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>Return the total number of records that will be created on submission of the dataset.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of records that will be added to the collection.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The number returned will be different depending on the dataset used.</li>
+<li>The amount of unqiue molecule can be found using <code>n_molecules</code></li>
+<li>see also the <a href="None#qcsubmit.datasets.BasicDataset.n_molecules">n_molecules</a></li>
+</ul>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.__json_encoder__"><code class="codehilite"><span class="n">__json_encoder__</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></code> <em>(staticmethod)</em><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.__json_encoder__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>partial(func, <em>args, </em>*keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.add_molecule"><code class="codehilite"><span class="n">add_molecule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">molecule</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">extras</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keywords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.add_molecule" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_molecule</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">,</span>
+        <span class="n">attributes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">extras</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">keywords</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add a molecule to the dataset under the given index with the passed cmiles.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        index : str</span>
+<span class="sd">            The molecule index that was generated by the factory.</span>
+<span class="sd">        molecule : openforcefield.topology.Molecule</span>
+<span class="sd">            The instance of the molecule which contains its conformer information.</span>
+<span class="sd">        attributes : Dict[str, str]</span>
+<span class="sd">            The attributes dictionary containing all of the relevant identifier tags for the molecule and</span>
+<span class="sd">            extra meta information on the calculation.</span>
+<span class="sd">        extras : Dict[str, Any], optional, default=None</span>
+<span class="sd">            The extras that should be supplied into the qcportal.moldels.Molecule.</span>
+<span class="sd">        keywords : Dict[str, Any], optional, default=None,</span>
+<span class="sd">            Any extra keywords which are required for the calculation.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Each molecule in this basic dataset should have all of its conformers expanded out into separate entries.</span>
+<span class="sd">            Thus here we take the general molecule index and increment it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data_entry</span> <span class="o">=</span> <span class="n">DatasetEntry</span><span class="p">(</span>
+                <span class="n">off_molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">attributes</span><span class="o">=</span><span class="n">attributes</span><span class="p">,</span>
+                <span class="n">extras</span><span class="o">=</span><span class="n">extras</span><span class="p">,</span>
+                <span class="n">keywords</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_entry</span>
+        <span class="k">except</span> <span class="n">qcel</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">:</span>
+            <span class="c1"># the molecule has some qcschema issue and should be removed</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">filter_molecules</span><span class="p">(</span>
+                <span class="n">molecules</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                <span class="n">component_name</span><span class="o">=</span><span class="s2">&quot;QCSchemaIssues&quot;</span><span class="p">,</span>
+                <span class="n">component_description</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s2">&quot;component_description&quot;</span><span class="p">:</span> <span class="s2">&quot;The molecule was removed as a valid QCSchema could not be made&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;component_name&quot;</span><span class="p">:</span> <span class="s2">&quot;QCSchemaIssues&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="n">component_provenance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">,</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Add a molecule to the dataset under the given index with the passed cmiles.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>index : str
+    The molecule index that was generated by the factory.
+molecule : openforcefield.topology.Molecule
+    The instance of the molecule which contains its conformer information.
+attributes : Dict[str, str]
+    The attributes dictionary containing all of the relevant identifier tags for the molecule and
+    extra meta information on the calculation.
+extras : Dict[str, Any], optional, default=None
+    The extras that should be supplied into the qcportal.moldels.Molecule.
+keywords : Dict[str, Any], optional, default=None,
+    Any extra keywords which are required for the calculation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each molecule in this basic dataset should have all of its conformers expanded out into separate entries.
+Thus here we take the general molecule index and increment it.</p>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.coverage_report"><code class="codehilite"><span class="n">coverage_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forcefields</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.coverage_report" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">coverage_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">forcefields</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Produce a coverage report of all of the parameters that are exercised by the molecules in the dataset.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            forcefields: The name of the openforcefield force field which should be included in the coverage report.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A dictionary for each of the force fields which break down which parameters are exercised by their</span>
+<span class="sd">            parameter type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">from</span> <span class="nn">openforcefield.typing.engines.smirnoff</span> <span class="kn">import</span> <span class="n">ForceField</span>
+        <span class="kn">from</span> <span class="nn">openforcefield.utils.structure</span> <span class="kn">import</span> <span class="n">get_molecule_parameterIDs</span>
+
+        <span class="n">coverage</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">param_types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;Angles&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;Bonds&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;Constraints&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="s2">&quot;ProperTorsions&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;i&quot;</span><span class="p">:</span> <span class="s2">&quot;ImproperTorsions&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="s2">&quot;vdW&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">forcefields</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">forcefields</span> <span class="o">=</span> <span class="p">[</span><span class="n">forcefields</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">forcefield</span> <span class="ow">in</span> <span class="n">forcefields</span><span class="p">:</span>
+
+            <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">ff</span> <span class="o">=</span> <span class="n">ForceField</span><span class="p">(</span><span class="n">forcefield</span><span class="p">)</span>
+            <span class="n">parameters_by_molecule</span><span class="p">,</span> <span class="n">parameters_by_id</span> <span class="o">=</span> <span class="n">get_molecule_parameterIDs</span><span class="p">(</span>
+                <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">),</span> <span class="n">ff</span>
+            <span class="p">)</span>
+
+            <span class="c1"># now create the the dict to store the ids used</span>
+            <span class="k">for</span> <span class="n">param_id</span> <span class="ow">in</span> <span class="n">parameters_by_id</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">param_types</span><span class="p">[</span><span class="n">param_id</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">param_id</span><span class="p">)</span>
+
+            <span class="c1"># now store the force field dict into the main result</span>
+            <span class="n">coverage</span><span class="p">[</span><span class="n">forcefield</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+
+        <span class="k">return</span> <span class="n">coverage</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Produce a coverage report of all of the parameters that are exercised by the molecules in the dataset.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forcefields</code></td>
+<td><code>List[str]</code></td>
+<td>The name of the openforcefield force field which should be included in the coverage report.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict</code></td>
+<td>A dictionary for each of the force fields which break down which parameters are exercised by their     parameter type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.export_dataset"><code class="codehilite"><span class="n">export_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.export_dataset" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">export_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Export the dataset to file so that it can be used to make another dataset quickly.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            file_name: The name of the file the dataset should be wrote to.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The supported file types are:</span>
+
+<span class="sd">            - `json`</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            UnsupportedFiletypeError: If the requested file type is not supported.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_type</span> <span class="o">=</span> <span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+                <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedFiletypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested file type </span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s2"> is not supported please use &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;json or yaml&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Export the dataset to file so that it can be used to make another dataset quickly.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_name</code></td>
+<td><code>str</code></td>
+<td>The name of the file the dataset should be wrote to.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The supported file types are:</p>
+<ul>
+<li><code>json</code></li>
+</ul>
+</div>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnsupportedFiletypeError</code></td>
+<td>If the requested file type is not supported.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.filter_molecules"><code class="codehilite"><span class="n">filter_molecules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">,</span> <span class="n">component_name</span><span class="p">,</span> <span class="n">component_description</span><span class="p">,</span> <span class="n">component_provenance</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.filter_molecules" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">filter_molecules</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">molecules</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">]],</span>
+        <span class="n">component_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">component_description</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">component_provenance</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filter a molecule or list of molecules by the component they failed.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        molecules:</span>
+<span class="sd">            A molecule or list of molecules to be filtered.</span>
+<span class="sd">        component_description:</span>
+<span class="sd">            The dictionary representation of the component that filtered this set of molecules.</span>
+<span class="sd">        component_name:</span>
+<span class="sd">            The name of the component.</span>
+<span class="sd">        component_provenance:</span>
+<span class="sd">            The dictionary representation of the component provenance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">molecules</span><span class="p">,</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">):</span>
+            <span class="c1"># make into a list</span>
+            <span class="n">molecules</span> <span class="o">=</span> <span class="p">[</span><span class="n">molecules</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">component_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered_molecules</span><span class="p">:</span>
+            <span class="n">filter_mols</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span><span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span>
+            <span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">filtered_molecules</span><span class="p">[</span><span class="n">component_name</span><span class="p">]</span><span class="o">.</span><span class="n">molecules</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">filter_mols</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">filter_data</span> <span class="o">=</span> <span class="n">FilterEntry</span><span class="p">(</span>
+                <span class="n">off_molecules</span><span class="o">=</span><span class="n">molecules</span><span class="p">,</span>
+                <span class="n">component_name</span><span class="o">=</span><span class="n">component_name</span><span class="p">,</span>
+                <span class="n">component_provenance</span><span class="o">=</span><span class="n">component_provenance</span><span class="p">,</span>
+                <span class="n">component_description</span><span class="o">=</span><span class="n">component_description</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">filtered_molecules</span><span class="p">[</span><span class="n">filter_data</span><span class="o">.</span><span class="n">component_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">filter_data</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Filter a molecule or list of molecules by the component they failed.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>molecules:
+    A molecule or list of molecules to be filtered.
+component_description:
+    The dictionary representation of the component that filtered this set of molecules.
+component_name:
+    The name of the component.
+component_provenance:
+    The dictionary representation of the component provenance.</p>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.molecules_to_file"><code class="codehilite"><span class="n">molecules_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">file_type</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.molecules_to_file" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">molecules_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write the molecules to the requested file type.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            The supported file types are:</span>
+
+<span class="sd">            - SMI</span>
+<span class="sd">            - INCHI</span>
+<span class="sd">            - INCKIKEY</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_writers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;smi&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_molecules_to_smiles</span><span class="p">,</span>
+            <span class="s2">&quot;inchi&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_molecules_to_inchi</span><span class="p">,</span>
+            <span class="s2">&quot;inchikey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_molecules_to_inchikey</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># get the list of molecules</span>
+            <span class="n">molecules</span> <span class="o">=</span> <span class="n">file_writers</span><span class="p">[</span><span class="n">file_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()]()</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+                    <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">molecule</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedFiletypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested file type </span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s2"> is not supported, supported types are&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">file_writers</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Write the molecules to the requested file type.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The supported file types are:</p>
+<ul>
+<li>SMI</li>
+<li>INCHI</li>
+<li>INCKIKEY</li>
+</ul>
+</div>
+</div>
+<h3 id="qcsubmit.datasets.BasicDataset.submit"><code class="codehilite"><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.BasicDataset.submit" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="p">],</span>
+        <span class="n">await_result</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SingleResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the</span>
+<span class="sd">        corresponding result class.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">        client : Union[str, qcportal.FractalClient]</span>
+<span class="sd">            The name of the file containing the client information or an actual client instance.</span>
+<span class="sd">        await_result : bool, optional, default=False</span>
+<span class="sd">            If the user wants to wait for the calculation to finish before returning.</span>
+
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The collection of the results which have completed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">target_client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_activate_client</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+        <span class="c1"># work out if we are extending a collection</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">target_client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span><span class="p">,</span>
+                <span class="n">client</span><span class="o">=</span><span class="n">target_client</span><span class="p">,</span>
+                <span class="n">default_driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span>
+                <span class="n">default_program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+                <span class="n">tagline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tagline</span><span class="p">,</span>
+                <span class="n">tags</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tags</span><span class="p">,</span>
+                <span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                <span class="n">provenance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># store the keyword set into the collection</span>
+        <span class="n">kw</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">KeywordSet</span><span class="p">(</span>
+            <span class="n">values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;maxiter&quot;</span><span class="p">,</span> <span class="s2">&quot;scf_properties&quot;</span><span class="p">})</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># try and add the keywords if present then continue</span>
+            <span class="n">collection</span><span class="o">.</span><span class="n">add_keywords</span><span class="p">(</span>
+                <span class="n">alias</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span> <span class="n">keyword</span><span class="o">=</span><span class="n">kw</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># now add the molecules to the database, saving every 30 for speed</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># check if the index we have been supplied has a number tag already if so start from this tag</span>
+            <span class="n">index</span><span class="p">,</span> <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">initial_molecules</span><span class="p">):</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">tag</span> <span class="o">+</span> <span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">collection</span><span class="o">.</span><span class="n">add_entry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">finally</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">30</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="c1"># save the added entries</span>
+                        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="c1"># save the final dataset</span>
+        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="c1"># submit the calculations</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+            <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">keywords</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span>
+            <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+            <span class="n">tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">compute_tag</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">priority</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the
+corresponding result class.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>client : Union[str, qcportal.FractalClient]
+    The name of the file containing the client information or an actual client instance.
+await_result : bool, optional, default=False
+    If the user wants to wait for the calculation to finish before returning.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SingleResult</code></td>
+<td>The collection of the results which have completed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="qcsubmit.datasets.ComponentResult"><code class="codehilite"><span class="n">ComponentResult</span></code><a class="headerlink" href="#qcsubmit.datasets.ComponentResult" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Class to contain molecules after the execution of a workflow component this automatically applies de-duplication to
+the molecules. For example if a molecule is already in the molecules list it will not be added but any conformers
+will be kept and transferred.</p>
+<p>If a molecule in the molecules list is then filtered it will be removed from the molecules list.</p>
+<h3 id="qcsubmit.datasets.ComponentResult.n_conformers"><code class="codehilite"><span class="n">n_conformers</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.n_conformers" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of conformers stored in the molecules.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.ComponentResult.n_filtered"><code class="codehilite"><span class="n">n_filtered</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.n_filtered" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of filtered molecules.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.ComponentResult.n_molecules"><code class="codehilite"><span class="n">n_molecules</span><span class="p">:</span> <span class="nb">int</span></code> <em>(property, readonly)</em><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.n_molecules" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>The number of molecules saved in the result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.ComponentResult.__init__"><code class="codehilite"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">component_name</span><span class="p">,</span> <span class="n">component_description</span><span class="p">,</span> <span class="n">component_provenance</span><span class="p">,</span> <span class="n">molecules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.__init__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">component_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">component_description</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">component_provenance</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">molecules</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">],</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">input_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Register the list of molecules to process.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            component_name: The name of the component that produced this result.</span>
+<span class="sd">            component_description: The dictionary representation of the component which details the function and running parameters.</span>
+<span class="sd">            component_provenance: The dictionary of the modules used and there version number when running the component.</span>
+<span class="sd">            component_provenance: The dictionary of the provenance information about the component that was used to generate the data.</span>
+<span class="sd">            molecules: The list of molecules that have been possessed by a component and returned as a result.</span>
+<span class="sd">            input_file: The name of the input file used to produce the result if not from a component.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">component_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">component_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">component_description</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">component_description</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">component_provenance</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">component_provenance</span>
+
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="n">molecules</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">input_file</span> <span class="ow">is</span> <span class="kc">None</span>
+        <span class="p">),</span> <span class="s2">&quot;Provide either a list of molecules or an input file name.&quot;</span>
+
+        <span class="c1"># if we have an input file load it</span>
+        <span class="k">if</span> <span class="n">input_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">molecules</span> <span class="o">=</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span>
+                <span class="n">file_path</span><span class="o">=</span><span class="n">input_file</span><span class="p">,</span> <span class="n">allow_undefined_stereo</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+
+        <span class="c1"># now lets process the molecules and add them to the class</span>
+        <span class="k">if</span> <span class="n">molecules</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Register the list of molecules to process.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>component_name</code></td>
+<td><code>str</code></td>
+<td>The name of the component that produced this result.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>component_description</code></td>
+<td><code>Dict[str, str]</code></td>
+<td>The dictionary representation of the component which details the function and running parameters.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>component_provenance</code></td>
+<td><code>Dict[str, str]</code></td>
+<td>The dictionary of the modules used and there version number when running the component.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>component_provenance</code></td>
+<td><code>Dict[str, str]</code></td>
+<td>The dictionary of the provenance information about the component that was used to generate the data.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>molecules</code></td>
+<td><code>Optional[Union[List[openforcefield.topology.molecule.Molecule], openforcefield.topology.molecule.Molecule]]</code></td>
+<td>The list of molecules that have been possessed by a component and returned as a result.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>input_file</code></td>
+<td><code>Optional[str]</code></td>
+<td>The name of the input file used to produce the result if not from a component.</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.ComponentResult.add_molecule"><code class="codehilite"><span class="n">add_molecule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.add_molecule" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_molecule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add a molecule to the molecule list after checking that it is not present already. If it is de-duplicate the</span>
+<span class="sd">        record and condense the conformers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+        <span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">unit</span>
+
+        <span class="k">if</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">:</span>
+            <span class="c1"># we need to align the molecules and transfer the coords and properties</span>
+            <span class="n">mol_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+            <span class="c1"># get the mapping</span>
+            <span class="n">isomorphic</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="o">.</span><span class="n">are_isomorphic</span><span class="p">(</span>
+                <span class="n">molecule</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">[</span><span class="n">mol_id</span><span class="p">],</span> <span class="n">return_atom_map</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">assert</span> <span class="n">isomorphic</span> <span class="ow">is</span> <span class="kc">True</span>
+            <span class="c1"># transfer any torsion indexs for similar fragments</span>
+            <span class="k">if</span> <span class="s2">&quot;dihedrals&quot;</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">:</span>
+                <span class="c1"># remap the dihedrals</span>
+                <span class="k">for</span> <span class="n">dihedral</span><span class="p">,</span> <span class="n">dihedral_range</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span>
+                    <span class="s2">&quot;dihedrals&quot;</span>
+                <span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dihedral</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                        <span class="n">mapped_dihedral</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dihedral</span><span class="p">])</span>
+                    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">dihedral</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                        <span class="c1"># this is a 2d dihedral</span>
+                        <span class="n">mapped_dihedral</span> <span class="o">=</span> <span class="p">(</span>
+                            <span class="nb">tuple</span><span class="p">([</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dihedral</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span>
+                            <span class="nb">tuple</span><span class="p">([</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dihedral</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span>
+                        <span class="p">)</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">[</span><span class="n">mol_id</span><span class="p">]</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;dihedrals&quot;</span><span class="p">][</span>
+                            <span class="n">mapped_dihedral</span>
+                        <span class="p">]</span> <span class="o">=</span> <span class="n">dihedral_range</span>
+                    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">[</span><span class="n">mol_id</span><span class="p">]</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;dihedrals&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                            <span class="n">mapped_dihedral</span><span class="p">:</span> <span class="n">dihedral_range</span>
+                        <span class="p">}</span>
+
+            <span class="k">if</span> <span class="n">molecule</span><span class="o">.</span><span class="n">n_conformers</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+
+                <span class="c1"># transfer the coordinates</span>
+                <span class="k">for</span> <span class="n">conformer</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">conformers</span><span class="p">:</span>
+                    <span class="n">new_conformer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">molecule</span><span class="o">.</span><span class="n">n_atoms</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">n_atoms</span><span class="p">):</span>
+                        <span class="n">new_conformer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">conformer</span><span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">value_in_unit</span><span class="p">(</span>
+                            <span class="n">unit</span><span class="o">.</span><span class="n">angstrom</span>
+                        <span class="p">)</span>
+
+                    <span class="n">new_conf</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">new_conformer</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="o">.</span><span class="n">angstrom</span><span class="p">)</span>
+
+                    <span class="c1"># check if the conformer is already on the molecule</span>
+                    <span class="k">for</span> <span class="n">old_conformer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">[</span><span class="n">mol_id</span><span class="p">]</span><span class="o">.</span><span class="n">conformers</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">old_conformer</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">==</span> <span class="n">new_conf</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
+                            <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="p">[</span><span class="n">mol_id</span><span class="p">]</span><span class="o">.</span><span class="n">add_conformer</span><span class="p">(</span>
+                            <span class="n">new_conformer</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstrom</span>
+                        <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># molecule already in list and coords not present so just return</span>
+                <span class="k">return</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Add a molecule to the molecule list after checking that it is not present already. If it is de-duplicate the
+record and condense the conformers.</p>
+</div>
+<h3 id="qcsubmit.datasets.ComponentResult.filter_molecule"><code class="codehilite"><span class="n">filter_molecule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.ComponentResult.filter_molecule" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">filter_molecule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filter out a molecule that has not passed this workflow component. If the molecule is already in the pass list</span>
+<span class="sd">        remove it and ensure it is only in the filtered list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">molecules</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">molecule</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Filter out a molecule that has not passed this workflow component. If the molecule is already in the pass list
+remove it and ensure it is only in the filtered list.</p>
+</div>
+</div>
+<h2 id="qcsubmit.datasets.DatasetEntry"><code class="codehilite"><span class="n">DatasetEntry</span></code><a class="headerlink" href="#qcsubmit.datasets.DatasetEntry" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>A basic data class to construct the datasets which holds any information about the molecule and options used in
+the qcarchive calculation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>extras</code> are passed into the qcelemental.models.Molecule on creation.</li>
+<li>any extras that should passed to the calculation like extra constrains should be passed to <code>keywords</code>.</li>
+</ul>
+</div>
+<h3 id="qcsubmit.datasets.DatasetEntry.__init__"><code class="codehilite"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">off_molecule</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.DatasetEntry.__init__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">off_molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Init the dataclass handling conversions of the molecule first.</span>
+<span class="sd">        This is needed to make sure the extras are passed into the qcschema molecule.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">extras</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;extras&quot;</span><span class="p">]</span>
+        <span class="c1"># if we get an off_molecule we need to convert it</span>
+        <span class="k">if</span> <span class="n">off_molecule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">off_molecule</span><span class="o">.</span><span class="n">n_conformers</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">off_molecule</span><span class="o">.</span><span class="n">generate_conformers</span><span class="p">(</span><span class="n">n_conformers</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># TODO add extras here when we can</span>
+            <span class="n">schema_mols</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">off_molecule</span><span class="o">.</span><span class="n">to_qcschema</span><span class="p">(</span><span class="n">conformer</span><span class="o">=</span><span class="n">conformer</span><span class="p">,</span> <span class="n">extras</span><span class="o">=</span><span class="n">extras</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">conformer</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">off_molecule</span><span class="o">.</span><span class="n">n_conformers</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;initial_molecules&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">schema_mols</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Init the dataclass handling conversions of the molecule first.
+This is needed to make sure the extras are passed into the qcschema molecule.</p>
+</div>
+<h3 id="qcsubmit.datasets.DatasetEntry.__json_encoder__"><code class="codehilite"><span class="n">__json_encoder__</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></code> <em>(staticmethod)</em><a class="headerlink" href="#qcsubmit.datasets.DatasetEntry.__json_encoder__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>partial(func, <em>args, </em>*keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</div>
+</div>
+<h2 id="qcsubmit.datasets.FilterEntry"><code class="codehilite"><span class="n">FilterEntry</span></code><a class="headerlink" href="#qcsubmit.datasets.FilterEntry" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>A basic data class that contains information on components run in a workflow and the associated molecules which were
+removed by it.</p>
+<h3 id="qcsubmit.datasets.FilterEntry.__init__"><code class="codehilite"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">off_molecules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.FilterEntry.__init__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">off_molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Init the dataclass handling conversions of the molecule first.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">molecules</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span><span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">off_molecules</span>
+        <span class="p">]</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;molecules&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">molecules</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Init the dataclass handling conversions of the molecule first.</p>
+</div>
+<h3 id="qcsubmit.datasets.FilterEntry.__json_encoder__"><code class="codehilite"><span class="n">__json_encoder__</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></code> <em>(staticmethod)</em><a class="headerlink" href="#qcsubmit.datasets.FilterEntry.__json_encoder__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>partial(func, <em>args, </em>*keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</div>
+</div>
+<h2 id="qcsubmit.datasets.OptimizationDataset"><code class="codehilite"><span class="n">OptimizationDataset</span></code><a class="headerlink" href="#qcsubmit.datasets.OptimizationDataset" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>An optimisation dataset class which handles submission of settings differently from the basic dataset, and creates
+optimization datasets in the public or local qcarcive instance.</p>
+<h3 id="qcsubmit.datasets.OptimizationDataset.__json_encoder__"><code class="codehilite"><span class="n">__json_encoder__</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></code> <em>(staticmethod)</em><a class="headerlink" href="#qcsubmit.datasets.OptimizationDataset.__json_encoder__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>partial(func, <em>args, </em>*keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</div>
+<h3 id="qcsubmit.datasets.OptimizationDataset.get_qc_spec"><code class="codehilite"><span class="n">get_qc_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keyword_id</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.OptimizationDataset.get_qc_spec" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">get_qc_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keyword_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QCSpecification</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the QC specification for the computation.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            keyword_id: The string of the keyword set id number.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The dictionary representation of the QC specification</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">qc_spec</span> <span class="o">=</span> <span class="n">QCSpecification</span><span class="p">(</span>
+            <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">keywords</span><span class="o">=</span><span class="n">keyword_id</span><span class="p">,</span>
+            <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">qc_spec</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create the QC specification for the computation.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyword_id</code></td>
+<td><code>str</code></td>
+<td>The string of the keyword set id number.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QCSpecification</code></td>
+<td>The dictionary representation of the QC specification</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.datasets.OptimizationDataset.submit"><code class="codehilite"><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.OptimizationDataset.submit" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="p">],</span> <span class="n">await_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SingleResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the</span>
+<span class="sd">        corresponding result class.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            await_result: If the user wants to wait for the calculation to finish before returning.</span>
+<span class="sd">            client: The name of the file containing the client information or the client instance.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Either `None` if we are not waiting for the results or a BasicResult instance with all of the completed</span>
+<span class="sd">            calculations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">target_client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_activate_client</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+        <span class="c1"># work out if we are extending a collection</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">target_client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span>
+                <span class="s2">&quot;OptimizationDataset&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">OptimizationDataset</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span><span class="p">,</span>
+                <span class="n">client</span><span class="o">=</span><span class="n">target_client</span><span class="p">,</span>
+                <span class="n">default_driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span>
+                <span class="n">default_program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+                <span class="n">tagline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tagline</span><span class="p">,</span>
+                <span class="n">tags</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tags</span><span class="p">,</span>
+                <span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                <span class="n">provenance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># store the keyword set into the collection</span>
+        <span class="n">kw_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_keywords</span><span class="p">(</span><span class="n">target_client</span><span class="p">)</span>
+        <span class="c1"># create the optimization specification</span>
+        <span class="n">opt_spec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimization_procedure</span><span class="o">.</span><span class="n">get_optimzation_spec</span><span class="p">()</span>
+        <span class="c1"># create the qc specification</span>
+        <span class="n">qc_spec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_qc_spec</span><span class="p">(</span><span class="n">keyword_id</span><span class="o">=</span><span class="n">kw_id</span><span class="p">)</span>
+        <span class="n">collection</span><span class="o">.</span><span class="n">add_specification</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span>
+            <span class="n">optimization_spec</span><span class="o">=</span><span class="n">opt_spec</span><span class="p">,</span>
+            <span class="n">qc_spec</span><span class="o">=</span><span class="n">qc_spec</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_description</span><span class="p">,</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># now add the molecules to the database, saving every 30 for speed</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># check if the index we have been supplied has a number tag already if so start from this tag</span>
+            <span class="n">index</span><span class="p">,</span> <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_index</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">initial_molecules</span><span class="p">):</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">tag</span> <span class="o">+</span> <span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">collection</span><span class="o">.</span><span class="n">add_entry</span><span class="p">(</span>
+                        <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                        <span class="n">initial_molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                        <span class="n">attributes</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+                        <span class="n">additional_keywords</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">keywords</span><span class="p">,</span>
+                        <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="k">finally</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">30</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="c1"># save the added entries</span>
+                        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="c1"># save the added entries</span>
+        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="c1"># submit the calculations</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+            <span class="n">specification</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">compute_tag</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">priority</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the
+corresponding result class.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await_result</code></td>
+<td><code>bool</code></td>
+<td>If the user wants to wait for the calculation to finish before returning.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>client</code></td>
+<td><code>Union[str, qcportal.client.FractalClient]</code></td>
+<td>The name of the file containing the client information or the client instance.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SingleResult</code></td>
+<td>Either <code>None</code> if we are not waiting for the results or a BasicResult instance with all of the completed     calculations.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="qcsubmit.datasets.TorsiondriveDataset"><code class="codehilite"><span class="n">TorsiondriveDataset</span></code><a class="headerlink" href="#qcsubmit.datasets.TorsiondriveDataset" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>An torsiondrive dataset class which handles submission of settings differently from the basic dataset, and creates
+torsiondrive datasets in the public or local qcarcive instance.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The dihedral_ranges for the whole dataset can be defined here or if different scan ranges are required on a case
+ by case basis they can be defined for each torsion in a molecule separately in the properties attribute of the
+molecule. For example <code>mol.properties['dihedral_range'] = (-165, 180)</code></p>
+</div>
+<h3 id="qcsubmit.datasets.TorsiondriveDataset.__json_encoder__"><code class="codehilite"><span class="n">__json_encoder__</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></code> <em>(staticmethod)</em><a class="headerlink" href="#qcsubmit.datasets.TorsiondriveDataset.__json_encoder__" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<p>partial(func, <em>args, </em>*keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</div>
+<h3 id="qcsubmit.datasets.TorsiondriveDataset.submit"><code class="codehilite"><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.datasets.TorsiondriveDataset.submit" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/datasets.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>917
+918
+919
+920
+921
+922
+923
+924
+925
+926
+927
+928
+929
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973
+974
+975
+976
+977
+978
+979
+980
+981
+982
+983
+984
+985
+986
+987
+988
+989
+990
+991
+992</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">submit</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="p">],</span> <span class="n">await_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SingleResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the</span>
+<span class="sd">        corresponding result class.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            await_result: If the user wants to wait for the calculation to finish before returning.</span>
+<span class="sd">            client: The name of the file containing the client information or the client instance.</span>
+
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Either `None` if we are not waiting for the results or a BasicResult instance with all of the completed</span>
+<span class="sd">            calculations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">target_client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_activate_client</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+        <span class="c1"># work out if we are extending a collection</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">target_client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span>
+                <span class="s2">&quot;TorsionDriveDataset&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">collections</span><span class="o">.</span><span class="n">TorsionDriveDataset</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_name</span><span class="p">,</span>
+                <span class="n">client</span><span class="o">=</span><span class="n">target_client</span><span class="p">,</span>
+                <span class="n">default_driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span>
+                <span class="n">default_program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+                <span class="n">tagline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tagline</span><span class="p">,</span>
+                <span class="n">tags</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_tags</span><span class="p">,</span>
+                <span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                <span class="n">provenance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">,</span>
+                <span class="n">metadata</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="c1"># store the keyword set into the collection</span>
+        <span class="n">kw_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_keywords</span><span class="p">(</span><span class="n">target_client</span><span class="p">)</span>
+        <span class="c1"># create the optimization specification</span>
+        <span class="n">opt_spec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimization_procedure</span><span class="o">.</span><span class="n">get_optimzation_spec</span><span class="p">()</span>
+        <span class="c1"># create the qc specification</span>
+        <span class="n">qc_spec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_qc_spec</span><span class="p">(</span><span class="n">keyword_id</span><span class="o">=</span><span class="n">kw_id</span><span class="p">)</span>
+        <span class="n">collection</span><span class="o">.</span><span class="n">add_specification</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span>
+            <span class="n">optimization_spec</span><span class="o">=</span><span class="n">opt_spec</span><span class="p">,</span>
+            <span class="n">qc_spec</span><span class="o">=</span><span class="n">qc_spec</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_description</span><span class="p">,</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># start add the molecule to the dataset, multipule conformers/molecules can be used as the starting geometry</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">collection</span><span class="o">.</span><span class="n">add_entry</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+                    <span class="n">initial_molecules</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">initial_molecules</span><span class="p">,</span>
+                    <span class="n">dihedrals</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">dihedrals</span><span class="p">,</span>
+                    <span class="n">grid_spacing</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">grid_spacings</span><span class="p">,</span>
+                    <span class="n">energy_upper_limit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_upper_limit</span><span class="p">,</span>
+                    <span class="n">attributes</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">attributes</span><span class="p">,</span>
+                    <span class="n">energy_decrease_thresh</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_decrease_thresh</span><span class="p">,</span>
+                    <span class="n">dihedral_ranges</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">keywords</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dihedral_ranges&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">dihedral_ranges</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">30</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="c1"># submit the calculations</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+            <span class="n">specification</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">compute_tag</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">priority</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Submit the dataset to the chosen qcarchive address and finish or wait for the results and return the
+corresponding result class.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await_result</code></td>
+<td><code>bool</code></td>
+<td>If the user wants to wait for the calculation to finish before returning.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>client</code></td>
+<td><code>Union[str, qcportal.client.FractalClient]</code></td>
+<td>The name of the file containing the client information or the client instance.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SingleResult</code></td>
+<td>Either <code>None</code> if we are not waiting for the results or a BasicResult instance with all of the completed     calculations.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../factories/" title="Factories" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Factories
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../exceptions/" title="Exceptions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Exceptions
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

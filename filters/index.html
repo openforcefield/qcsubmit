@@ -1,0 +1,1482 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Filters - QCSubmit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qcsubmit.workflow_components.filters.CoverageFilter" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="QCSubmit" aria-label="QCSubmit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QCSubmit
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Filters
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="QCSubmit" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QCSubmit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Notebooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Collecting_results/" title="Collecting Results" class="md-nav__link">
+      Collecting Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../factories/" title="Factories" class="md-nav__link">
+      Factories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../procedures/" title="Procedures" class="md-nav__link">
+      Procedures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Workflow Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Workflow Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_component/" title="Base Component" class="md-nav__link">
+      Base Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Filters
+      </label>
+    
+    <a href="./" title="Filters" class="md-nav__link md-nav__link--active">
+      Filters
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter" class="md-nav__link">
+    CoverageFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter" class="md-nav__link">
+    ElementFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements" class="md-nav__link">
+    check_allowed_elements()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter" class="md-nav__link">
+    MolecularWeightFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.RotorFilter" class="md-nav__link">
+    RotorFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.RotorFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conformer_generation/" title="Conformer Generation" class="md-nav__link">
+      Conformer Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state_enumeration/" title="State Enumeration" class="md-nav__link">
+      State Enumeration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter" class="md-nav__link">
+    CoverageFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.CoverageFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter" class="md-nav__link">
+    ElementFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements" class="md-nav__link">
+    check_allowed_elements()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.ElementFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter" class="md-nav__link">
+    MolecularWeightFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.RotorFilter" class="md-nav__link">
+    RotorFilter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.workflow_components.filters.RotorFilter.apply" class="md-nav__link">
+    apply()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/openforcefield/qcsubmit/edit/master/docs/filters.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Filters</h1>
+                
+                <p>File containing the filters workflow components.</p>
+<h2 id="qcsubmit.workflow_components.filters.CoverageFilter"><code class="codehilite"><span class="n">CoverageFilter</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.CoverageFilter" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Filters molecules based on the requested forcefield coverage.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The ids supplied to the respective group are the ids that are allowed, if <code>None</code> is passed all ids are allowed.</p>
+</div>
+<p>Atributes:
+    allowed_ids: The list of parameter ids that we want to actively pass the filter.
+    filtered_ids: The list of parameter ids that we want to actively filter out and fail the filter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a molecule has any id in the allowed_ids and not in the filtered ids it is passed. Any molecule with a
+parameter in both sets is failed.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A value of None in a list will let all molecules through.</p>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.CoverageFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.CoverageFilter.apply" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the filter to the list of molecules to remove any molecules typed by an id that is not allowed, i.e. not</span>
+<span class="sd">        included in the allowed list.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecules: The list of molecules the component should be applied on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [ComponentResult][qcsubmit.datasets.ComponentResult] instance containing information about the molecules</span>
+<span class="sd">            that passed and were filtered by the component and details about the component which generated the result.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># pass all of the molecules then filter ones that have elements that are not allowed</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_result</span><span class="p">()</span>
+        <span class="c1"># build a molecule mapping</span>
+        <span class="n">molecule_mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(),</span> <span class="n">molecule</span><span class="p">)</span> <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span>
+        <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+
+        <span class="c1"># the forcefield we are testing against</span>
+        <span class="n">forcefield</span> <span class="o">=</span> <span class="n">ForceField</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">forcefield</span><span class="p">)</span>
+        <span class="n">parameters_by_molecule</span><span class="p">,</span> <span class="n">parameters_by_ID</span> <span class="o">=</span> <span class="n">get_molecule_parameterIDs</span><span class="p">(</span>
+            <span class="n">molecules</span><span class="p">,</span> <span class="n">forcefield</span>
+        <span class="p">)</span>
+
+        <span class="c1"># loop through the tags</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered_ids</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">filtered_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered_ids</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">filtered</span> <span class="o">=</span> <span class="n">parameters_by_ID</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">filtered_id</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">filtered</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">fail_molecule</span><span class="p">(</span><span class="n">molecule_mapping</span><span class="p">[</span><span class="n">molecule</span><span class="p">],</span> <span class="n">result</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Apply the filter to the list of molecules to remove any molecules typed by an id that is not allowed, i.e. not
+included in the allowed list.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecules</code></td>
+<td><code>List[openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules the component should be applied on.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ComponentResult</code></td>
+<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.CoverageFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.CoverageFilter.provenance" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate version information for all of the software used during the running of this component.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A dictionary of all of the software used in the component along wither their version numbers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">openforcefields</span>
+
+        <span class="n">provenance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+        <span class="n">provenance</span><span class="p">[</span><span class="s2">&quot;oopenforcefields&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">openforcefields</span><span class="o">.</span><span class="n">__version__</span>
+
+        <span class="k">return</span> <span class="n">provenance</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Generate version information for all of the software used during the running of this component.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict</code></td>
+<td>A dictionary of all of the software used in the component along wither their version numbers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="qcsubmit.workflow_components.filters.ElementFilter"><code class="codehilite"><span class="n">ElementFilter</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Filter the molecules based on a list of allowed elements.</p>
+<p>Attributes:
+    component_name: The name of component.
+    component_description: A short desciption of the component.
+    component_fail_message: The message logged when a molecule fails this component.
+    allowed_elements: A list of atomic symbols or atomic numbers which are allowed passed the filter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>allowed_elements</code> attribute can take a list of either symbols or atomic numbers and will resolve them to a
+common internal format as required.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Using atomic symbols or atomic numbers in components.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">qcsubmit</span> <span class="kn">import</span> <span class="n">workflow_components</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">efil</span> <span class="o">=</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">ElementFilter</span><span class="p">()</span>
+<span class="c1"># set the allowed elements to H,C,N,O</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">efil</span><span class="o">.</span><span class="n">allowed_elements</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">efil</span><span class="o">.</span><span class="n">allowed_elements</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</code></pre></div>
+
+</div>
+<h3 id="qcsubmit.workflow_components.filters.ElementFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.apply" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The common entry point of all workflow components which applies the workflow component to the given list of</span>
+<span class="sd">        molecules.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecules: The list of molecules the component should be applied on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [ComponentResult][qcsubmit.datasets.ComponentResult] instance containing information about the molecules</span>
+<span class="sd">            that passed and were filtered by the component and details about the component which generated the result.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">simtk.openmm.app</span> <span class="kn">import</span> <span class="n">Element</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_result</span><span class="p">()</span>
+
+        <span class="c1"># First lets convert the allowed_elements list to ints as this is what is stored in the atom object</span>
+        <span class="n">_allowed_elements</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Element</span><span class="o">.</span><span class="n">getBySymbol</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span><span class="o">.</span><span class="n">atomic_number</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ele</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">ele</span>
+            <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_elements</span>
+        <span class="p">]</span>
+
+        <span class="c1"># now apply the filter</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">atoms</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">atom</span><span class="o">.</span><span class="n">atomic_number</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_allowed_elements</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">fail_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span> <span class="n">component_result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>The common entry point of all workflow components which applies the workflow component to the given list of
+molecules.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecules</code></td>
+<td><code>List[openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules the component should be applied on.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ComponentResult</code></td>
+<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements"><code class="codehilite"><span class="n">check_allowed_elements</span><span class="p">(</span><span class="n">element</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;allowed_elements&quot;</span><span class="p">,</span> <span class="n">each_item</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_allowed_elements</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check that each item can be cast to a valid element.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            element: The element that should be checked.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the element number or symbol passed could not be converted into a valid element.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">simtk.openmm.app</span> <span class="kn">import</span> <span class="n">Element</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">element</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">e</span> <span class="o">=</span> <span class="n">Element</span><span class="o">.</span><span class="n">getBySymbol</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">element</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;An element could not be determined from symbol </span><span class="si">{</span><span class="n">element</span><span class="si">}</span><span class="s2">, please eneter symbols only.&quot;</span>
+                <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Check that each item can be cast to a valid element.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>element</code></td>
+<td><code>Union[str, int]</code></td>
+<td>The element that should be checked.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>If the element number or symbol passed could not be converted into a valid element.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.ElementFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.provenance" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate version information for all of the software used during the running of this component.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A dictionary of all of the software used in the component along wither their version numbers.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The element class in OpenMM is used to match the elements so the OpenMM version is given.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">openmm</span>
+
+        <span class="n">provenance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+        <span class="n">provenance</span><span class="p">[</span><span class="s2">&quot;openmm_elements&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">__version__</span>
+
+        <span class="k">return</span> <span class="n">provenance</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Generate version information for all of the software used during the running of this component.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict</code></td>
+<td>A dictionary of all of the software used in the component along wither their version numbers.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The element class in OpenMM is used to match the elements so the OpenMM version is given.</p>
+</div>
+</div>
+</div>
+<h2 id="qcsubmit.workflow_components.filters.MolecularWeightFilter"><code class="codehilite"><span class="n">MolecularWeightFilter</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.MolecularWeightFilter" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Filters molecules based on the minimum and maximum allowed molecular weights.</p>
+<p>Attributes:
+    fields.component_name: The name of component.
+    fields.component_description: A short description of the component.
+    fields.component_fail_message: The message logged when a molecule fails this component.
+    fields.minimum_weight: The minimum allowed molecular weight of a molecule.
+    fields.maximum_weight: The maximum allowed molecular weight of a molecule.</p>
+<h3 id="qcsubmit.workflow_components.filters.MolecularWeightFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.apply" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The common entry point of all workflow components which applies the workflow component to the given list of</span>
+<span class="sd">        molecules.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecules: The list of molecules the component should be applied on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [ComponentResult][qcsubmit.datasets.ComponentResult] instance containing information about the molecules</span>
+<span class="sd">            that passed and were filtered by the component and details about the component which generated the result.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">unit</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_result</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+            <span class="n">total_weight</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+                <span class="p">[</span>
+                    <span class="n">atom</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">mass</span><span class="o">.</span><span class="n">value_in_unit</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">daltons</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">atoms</span>
+                <span class="p">]</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">minimum_weight</span> <span class="o">&lt;</span> <span class="n">total_weight</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maximum_weight</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fail_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span> <span class="n">component_result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>The common entry point of all workflow components which applies the workflow component to the given list of
+molecules.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecules</code></td>
+<td><code>List[openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules the component should be applied on.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ComponentResult</code></td>
+<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate version information for all of the software used during the running of this component.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A dictionary of all of the software used in the component along wither their version numbers.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            The simtk unit module has no version information so the version of OpenMM is given instead.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">openmm</span>
+
+        <span class="n">provenance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+        <span class="n">provenance</span><span class="p">[</span><span class="s2">&quot;openmm_units&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">__version__</span>
+
+        <span class="k">return</span> <span class="n">provenance</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Generate version information for all of the software used during the running of this component.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict</code></td>
+<td>A dictionary of all of the software used in the component along wither their version numbers.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The simtk unit module has no version information so the version of OpenMM is given instead.</p>
+</div>
+</div>
+</div>
+<h2 id="qcsubmit.workflow_components.filters.RotorFilter"><code class="codehilite"><span class="n">RotorFilter</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.RotorFilter" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Filters molecules based on the maximum allowed number of rotatable bonds.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rotatable bonds are non terminal torsions found using the <code>find_rotatable_bonds</code> method of the
+openforcefield.topology.Molecule class.</p>
+</div>
+<h3 id="qcsubmit.workflow_components.filters.RotorFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.RotorFilter.apply" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply the filter to the list of molecules to remove any molecules with more rotors then the maximum allowed</span>
+<span class="sd">        number.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecules: The list of molecules the component should be applied on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [ComponentResult][qcsubmit.datasets.ComponentResult] instance containing information about the molecules</span>
+<span class="sd">            that passed and were filtered by the component and details about the component which generated the result.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># create the return</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_result</span><span class="p">()</span>
+
+        <span class="c1"># run the the molecules and calculate the number of rotatable bonds</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">molecules</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">find_rotatable_bonds</span><span class="p">())</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">maximum_rotors</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fail_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span> <span class="n">component_result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Apply the filter to the list of molecules to remove any molecules with more rotors then the maximum allowed
+number.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecules</code></td>
+<td><code>List[openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules the component should be applied on.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ComponentResult</code></td>
+<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../base_component/" title="Base Component" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Base Component
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../conformer_generation/" title="Conformer Generation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Conformer Generation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

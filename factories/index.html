@@ -1,0 +1,2876 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Factories - QCSubmit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qcsubmit.factories.BasicDatasetFactory" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="QCSubmit" aria-label="QCSubmit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QCSubmit
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Factories
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="QCSubmit" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QCSubmit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Notebooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Collecting_results/" title="Collecting Results" class="md-nav__link">
+      Collecting Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Factories
+      </label>
+    
+    <a href="./" title="Factories" class="md-nav__link md-nav__link--active">
+      Factories
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory" class="md-nav__link">
+    BasicDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.add_workflow_component" class="md-nav__link">
+    add_workflow_component()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.clear_workflow" class="md-nav__link">
+    clear_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_cmiles_metadata" class="md-nav__link">
+    create_cmiles_metadata()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_dataset" class="md-nav__link">
+    create_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_index" class="md-nav__link">
+    create_index()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.export_settings" class="md-nav__link">
+    export_settings()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.export_workflow" class="md-nav__link">
+    export_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.get_workflow_component" class="md-nav__link">
+    get_workflow_component()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.import_settings" class="md-nav__link">
+    import_settings()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.import_workflow" class="md-nav__link">
+    import_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.remove_workflow_component" class="md-nav__link">
+    remove_workflow_component()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.OptimizationDatasetFactory" class="md-nav__link">
+    OptimizationDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.OptimizationDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory" class="md-nav__link">
+    TorsiondriveDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_dataset" class="md-nav__link">
+    create_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_index" class="md-nav__link">
+    create_index()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../procedures/" title="Procedures" class="md-nav__link">
+      Procedures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Workflow Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Workflow Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_component/" title="Base Component" class="md-nav__link">
+      Base Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filters/" title="Filters" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conformer_generation/" title="Conformer Generation" class="md-nav__link">
+      Conformer Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state_enumeration/" title="State Enumeration" class="md-nav__link">
+      State Enumeration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory" class="md-nav__link">
+    BasicDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.add_workflow_component" class="md-nav__link">
+    add_workflow_component()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.clear_workflow" class="md-nav__link">
+    clear_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_cmiles_metadata" class="md-nav__link">
+    create_cmiles_metadata()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_dataset" class="md-nav__link">
+    create_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.create_index" class="md-nav__link">
+    create_index()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.export_settings" class="md-nav__link">
+    export_settings()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.export_workflow" class="md-nav__link">
+    export_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.get_workflow_component" class="md-nav__link">
+    get_workflow_component()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.import_settings" class="md-nav__link">
+    import_settings()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.import_workflow" class="md-nav__link">
+    import_workflow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.provenance" class="md-nav__link">
+    provenance()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.BasicDatasetFactory.remove_workflow_component" class="md-nav__link">
+    remove_workflow_component()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.OptimizationDatasetFactory" class="md-nav__link">
+    OptimizationDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.OptimizationDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory" class="md-nav__link">
+    TorsiondriveDatasetFactory
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.add_compute" class="md-nav__link">
+    add_compute()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_dataset" class="md-nav__link">
+    create_dataset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_index" class="md-nav__link">
+    create_index()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/openforcefield/qcsubmit/edit/master/docs/factories.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Factories</h1>
+                
+                <h2 id="qcsubmit.factories.BasicDatasetFactory"><code class="codehilite"><span class="n">BasicDatasetFactory</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>Basic dataset generator factory used to build work flows using workflow components before executing them to generate
+a dataset.</p>
+<p>The basic dataset is ideal for large collections of single point calculations using any of the energy, gradient or
+hessian drivers.</p>
+<p>The main metadata features here are concerned with the QM settings to be used which includes the driver.</p>
+<p>Attributes:
+    method:  The QM theory to use during dataset calculations.
+    basis:   The basis set to use during dataset calculations.
+    program: The program which will be used during the calculations.
+    maxiter: The maximum amount of SCF cycles allowed.
+    driver:  The driver that should be used in the calculation ie energy/gradient/hessian.
+    scf_properties: A list of QM properties which should be calculated and collected during the driver calculation.
+    client:  The name of the client the data will be sent to for privet clusters this should be the file name where
+        the data is stored.
+    priority: The priority with which the dataset should be calculated.
+    tag: The tag name which should be given to the collection.
+    workflow: A dictionary which holds the workflow components to be executed in the set order.</p>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.add_compute"><code class="codehilite"><span class="n">add_compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.add_compute" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_compute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FractalClient</span><span class="p">],</span>
+        <span class="n">await_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A method that can add compute to an existing collection, this involves registering the QM settings and keywords</span>
+<span class="sd">        and running the compute.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            dataset_name: The name of the collection in the qcarchive instance that the compute should be added to.</span>
+<span class="sd">            await_result: If the function should block until the calculations have finished.</span>
+<span class="sd">            client: The name of the file containing the client information or the client instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span> <span class="nn">qcportal</span> <span class="k">as</span> <span class="nn">ptl</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="p">):</span>
+            <span class="n">target_client</span> <span class="o">=</span> <span class="n">client</span>
+        <span class="k">elif</span> <span class="n">client</span> <span class="o">==</span> <span class="s2">&quot;public&quot;</span><span class="p">:</span>
+            <span class="n">target_client</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">target_client</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">FractalClient</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">collection</span> <span class="o">=</span> <span class="n">target_client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The collection: </span><span class="si">{</span><span class="n">dataset_name</span><span class="si">}</span><span class="s2"> could not be found, you can only add compute to existing&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;collections.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">kw</span> <span class="o">=</span> <span class="n">ptl</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">KeywordSet</span><span class="p">(</span>
+            <span class="n">values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;maxiter&quot;</span><span class="p">,</span> <span class="s2">&quot;scf_properties&quot;</span><span class="p">})</span>
+        <span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># try add the keywords, if we get an error they have already been added.</span>
+            <span class="n">collection</span><span class="o">.</span><span class="n">add_keywords</span><span class="p">(</span>
+                <span class="n">alias</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span> <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span> <span class="n">keyword</span><span class="o">=</span><span class="n">kw</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+            <span class="c1"># save the keywords</span>
+            <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># submit the calculations</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span>
+            <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+            <span class="n">basis</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">basis</span><span class="p">,</span>
+            <span class="n">keywords</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spec_name</span><span class="p">,</span>
+            <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span>
+            <span class="n">tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">compute_tag</span><span class="p">,</span>
+            <span class="n">priority</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">priority</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">collection</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>A method that can add compute to an existing collection, this involves registering the QM settings and keywords
+and running the compute.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset_name</code></td>
+<td><code>str</code></td>
+<td>The name of the collection in the qcarchive instance that the compute should be added to.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>await_result</code></td>
+<td><code>bool</code></td>
+<td>If the function should block until the calculations have finished.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>client</code></td>
+<td><code>Union[str, qcportal.client.FractalClient]</code></td>
+<td>The name of the file containing the client information or the client instance.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.add_workflow_component"><code class="codehilite"><span class="n">add_workflow_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">components</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.add_workflow_component" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_workflow_component</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">components</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
+            <span class="n">List</span><span class="p">[</span><span class="n">workflow_components</span><span class="o">.</span><span class="n">CustomWorkflowComponent</span><span class="p">],</span>
+            <span class="n">workflow_components</span><span class="o">.</span><span class="n">CustomWorkflowComponent</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Take the workflow components validate them then insert them into the workflow.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            components: A list of or an individual qcsubmit.workflow_compoents.CustomWokflowComponent which are to be</span>
+<span class="sd">                validated and added to the current workflow.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            InvalidWorkflowComponentError: If an invalid workflow component is attempted to be added to the workflow.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">components</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="c1"># we have one component make it into a list</span>
+            <span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="n">components</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">CustomWorkflowComponent</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">component</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+                    <span class="k">raise</span> <span class="n">CompoenentRequirementError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The component </span><span class="si">{</span><span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="si">}</span><span class="s2"> could not be added to &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;the workflow due to missing requirements&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">if</span> <span class="n">component</span><span class="o">.</span><span class="n">component_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="p">[</span><span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">component</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># we should increment the name and add it to the workflow</span>
+                    <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">in</span> <span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="p">:</span>
+                        <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="p">,</span> <span class="mi">0</span>
+                    <span class="c1"># set the new name</span>
+                    <span class="n">component</span><span class="o">.</span><span class="n">component_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="p">[</span><span class="n">component</span><span class="o">.</span><span class="n">component_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">component</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">InvalidWorkflowComponentError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Component </span><span class="si">{</span><span class="n">component</span><span class="si">}</span><span class="s2"> rejected as it is not a sub &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;class of CustomWorkflowComponent.&quot;</span>
+                <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Take the workflow components validate them then insert them into the workflow.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>components</code></td>
+<td><code>Union[List[qcsubmit.workflow_components.base_component.CustomWorkflowComponent], qcsubmit.workflow_components.base_component.CustomWorkflowComponent]</code></td>
+<td>A list of or an individual qcsubmit.workflow_compoents.CustomWokflowComponent which are to be validated and added to the current workflow.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InvalidWorkflowComponentError</code></td>
+<td>If an invalid workflow component is attempted to be added to the workflow.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.clear_workflow"><code class="codehilite"><span class="n">clear_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.clear_workflow" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>112
+113
+114
+115
+116</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">clear_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reset the workflow to by empty.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Reset the workflow to by empty.</p>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.create_cmiles_metadata"><code class="codehilite"><span class="n">create_cmiles_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.create_cmiles_metadata" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">create_cmiles_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the Cmiles metadata for the molecule in this dataset.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecule: The molecule for which the cmiles data will be generated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The Cmiles identifiers generated for the input molecule.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The Cmiles identifiers currently include:</span>
+
+<span class="sd">            - `canonical_smiles`</span>
+<span class="sd">            - `canonical_isomeric_smiles`</span>
+<span class="sd">            - `canonical_explicit_hydrogen_smiles`</span>
+<span class="sd">            - `canonical_isomeric_explicit_hydrogen_smiles`</span>
+<span class="sd">            - `canonical_isomeric_explicit_hydrogen_mapped_smiles`</span>
+<span class="sd">            - `molecular_formula`</span>
+<span class="sd">            - `standard_inchi`</span>
+<span class="sd">            - `inchi_key`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">cmiles</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;canonical_smiles&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+                <span class="n">isomeric</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;canonical_isomeric_smiles&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+                <span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;canonical_explicit_hydrogen_smiles&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+                <span class="n">isomeric</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;canonical_isomeric_explicit_hydrogen_smiles&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+                <span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;canonical_isomeric_explicit_hydrogen_mapped_smiles&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+                <span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">),</span>
+            <span class="s2">&quot;molecular_formula&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">hill_formula</span><span class="p">,</span>
+            <span class="s2">&quot;standard_inchi&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_inchi</span><span class="p">(</span><span class="n">fixed_hydrogens</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+            <span class="s2">&quot;inchi_key&quot;</span><span class="p">:</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_inchikey</span><span class="p">(</span><span class="n">fixed_hydrogens</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">cmiles</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create the Cmiles metadata for the molecule in this dataset.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecule</code></td>
+<td><code>Molecule</code></td>
+<td>The molecule for which the cmiles data will be generated.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict[str, str]</code></td>
+<td>The Cmiles identifiers generated for the input molecule.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cmiles identifiers currently include:</p>
+<ul>
+<li><code>canonical_smiles</code></li>
+<li><code>canonical_isomeric_smiles</code></li>
+<li><code>canonical_explicit_hydrogen_smiles</code></li>
+<li><code>canonical_isomeric_explicit_hydrogen_smiles</code></li>
+<li><code>canonical_isomeric_explicit_hydrogen_mapped_smiles</code></li>
+<li><code>molecular_formula</code></li>
+<li><code>standard_inchi</code></li>
+<li><code>inchi_key</code></li>
+</ul>
+</div>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.create_dataset"><code class="codehilite"><span class="n">create_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">molecules</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.create_dataset" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">molecules</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">],</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">],</span>
+        <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BasicDataset</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Process the input molecules through the given workflow then create and populate the dataset class which acts as</span>
+<span class="sd">        a local representation for the collection in qcarchive and has the ability to submit its self to a local or</span>
+<span class="sd">        public instance.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">             dataset_name: The name that will be given to the collection on submission to an archive instance.</span>
+<span class="sd">             molecules: The list of molecules which should be processed by the workflow and added to the dataset, this</span>
+<span class="sd">                can also be a file name which is to be unpacked by the openforcefield toolkit.</span>
+<span class="sd">            description: A string describing the dataset.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            How to make a dataset from a list of molecules</span>
+
+<span class="sd">            ```python</span>
+<span class="sd">            &gt;&gt;&gt; from qcsubmit.factories import BasicDatasetFactory</span>
+<span class="sd">            &gt;&gt;&gt; from qcsubmit import workflow_components</span>
+<span class="sd">            &gt;&gt;&gt; from openforcefield.topology import Molecule</span>
+<span class="sd">            &gt;&gt;&gt; factory = BasicDatasetFactory()</span>
+<span class="sd">            &gt;&gt;&gt; gen = workflow_components.StandardConformerGenerator()</span>
+<span class="sd">            &gt;&gt;&gt; gen.clear_exsiting = True</span>
+<span class="sd">            &gt;&gt;&gt; gen.max_conformers = 1</span>
+<span class="sd">            &gt;&gt;&gt; factory.add_workflow_component(gen)</span>
+<span class="sd">            &gt;&gt;&gt; smiles = [&#39;C&#39;, &#39;CC&#39;, &#39;CCO&#39;]</span>
+<span class="sd">            &gt;&gt;&gt; mols = [Molecule.from_smiles(smile) for smile in smiles]</span>
+<span class="sd">            &gt;&gt;&gt; dataset = factory.create_dataset(dataset_name=&#39;My collection&#39;, molecules=mols)</span>
+<span class="sd">            ```</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [DataSet][qcsubmit.datasets.DataSet] instance populated with the molecules that have passed through the</span>
+<span class="sd">                workflow.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            The dataset once created does not allow mutation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO set up a logging system to report the components</span>
+
+        <span class="c1">#  create an initial component result</span>
+        <span class="n">workflow_molecules</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_initial_component_result</span><span class="p">(</span><span class="n">molecules</span><span class="o">=</span><span class="n">molecules</span><span class="p">)</span>
+
+        <span class="c1"># create the dataset</span>
+        <span class="c1"># first we need to instance the dataset and assign the metadata</span>
+        <span class="n">object_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;workflow&quot;</span><span class="p">})</span>
+
+        <span class="c1"># the only data missing is the collection name so add it here.</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;dataset_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset_name</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())}</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;provenance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dataset_type</span><span class="o">.</span><span class="n">parse_obj</span><span class="p">(</span><span class="n">object_meta</span><span class="p">)</span>
+
+        <span class="c1"># if the workflow has components run it</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">workflow_molecules</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                    <span class="n">molecules</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">molecules</span>
+                <span class="p">)</span>
+
+                <span class="n">dataset</span><span class="o">.</span><span class="n">filter_molecules</span><span class="p">(</span>
+                    <span class="n">molecules</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">filtered</span><span class="p">,</span>
+                    <span class="n">component_name</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_name</span><span class="p">,</span>
+                    <span class="n">component_description</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_description</span><span class="p">,</span>
+                    <span class="n">component_provenance</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_provenance</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="c1"># now add the molecules to the correct attributes</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">workflow_molecules</span><span class="o">.</span><span class="n">molecules</span><span class="p">:</span>
+            <span class="c1"># order the molecule</span>
+            <span class="n">order_mol</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">canonical_order_atoms</span><span class="p">()</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_cmiles_metadata</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">)</span>
+            <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;provenance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+
+            <span class="c1"># if we are using MM we should put the cmiles in the extras</span>
+            <span class="n">extras</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extras&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mm_programs</span><span class="p">:</span>
+                <span class="n">extras</span><span class="p">[</span>
+                    <span class="s2">&quot;canonical_isomeric_explicit_hydrogen_mapped_smiles&quot;</span>
+                <span class="p">]</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;canonical_isomeric_explicit_hydrogen_mapped_smiles&quot;</span><span class="p">]</span>
+
+            <span class="n">keywords</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;keywords&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="c1"># now submit the molecule</span>
+            <span class="n">dataset</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span>
+                <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">create_index</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">),</span>
+                <span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">,</span>
+                <span class="n">attributes</span><span class="o">=</span><span class="n">attributes</span><span class="p">,</span>
+                <span class="n">extras</span><span class="o">=</span><span class="n">extras</span> <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">extras</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                <span class="n">keywords</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dataset</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Process the input molecules through the given workflow then create and populate the dataset class which acts as
+a local representation for the collection in qcarchive and has the ability to submit its self to a local or
+public instance.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset_name</code></td>
+<td><code>str</code></td>
+<td>The name that will be given to the collection on submission to an archive instance.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>molecules</code></td>
+<td><code>Union[str, List[openforcefield.topology.molecule.Molecule], openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules which should be processed by the workflow and added to the dataset, this can also be a file name which is to be unpacked by the openforcefield toolkit.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>Optional[str]</code></td>
+<td>A string describing the dataset.</td>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>How to make a dataset from a list of molecules</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">qcsubmit.factories</span> <span class="kn">import</span> <span class="n">BasicDatasetFactory</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">qcsubmit</span> <span class="kn">import</span> <span class="n">workflow_components</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">openforcefield.topology</span> <span class="kn">import</span> <span class="n">Molecule</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">factory</span> <span class="o">=</span> <span class="n">BasicDatasetFactory</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">gen</span> <span class="o">=</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">StandardConformerGenerator</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">gen</span><span class="o">.</span><span class="n">clear_exsiting</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">gen</span><span class="o">.</span><span class="n">max_conformers</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">factory</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">smiles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="s1">&#39;CCO&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mols</span> <span class="o">=</span> <span class="p">[</span><span class="n">Molecule</span><span class="o">.</span><span class="n">from_smiles</span><span class="p">(</span><span class="n">smile</span><span class="p">)</span> <span class="k">for</span> <span class="n">smile</span> <span class="ow">in</span> <span class="n">smiles</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="s1">&#39;My collection&#39;</span><span class="p">,</span> <span class="n">molecules</span><span class="o">=</span><span class="n">mols</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BasicDataset</code></td>
+<td>A [DataSet][qcsubmit.datasets.DataSet] instance populated with the molecules that have passed through the         workflow.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The dataset once created does not allow mutation.</p>
+</div>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.create_index"><code class="codehilite"><span class="n">create_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.create_index" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">create_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create an index for the current molecule.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecule: The molecule for which the dataset index will be generated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The canonical isomeric smiles for the molecule which is used as the dataset index.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            Each dataset can have a different indexing system depending on the data, in this basic dataset each conformer</span>
+<span class="sd">            of a molecule is expanded into its own entry separately indexed entry. This is handled by the dataset however</span>
+<span class="sd">            so we just generate a general index for the molecule before adding to the dataset.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span>
+            <span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">index</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create an index for the current molecule.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecule</code></td>
+<td><code>Molecule</code></td>
+<td>The molecule for which the dataset index will be generated.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>The canonical isomeric smiles for the molecule which is used as the dataset index.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Each dataset can have a different indexing system depending on the data, in this basic dataset each conformer
+of a molecule is expanded into its own entry separately indexed entry. This is handled by the dataset however
+so we just generate a general index for the molecule before adding to the dataset.</p>
+</div>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.export_settings"><code class="codehilite"><span class="n">export_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.export_settings" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">export_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Export the current model to file this will include the workflow as well along with each components settings.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            file_name: The name of the file the settings and workflow should be exported to.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            UnsupportedFiletypeError: When the file type requested is not supported.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_file_type</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="n">file_name</span><span class="p">)</span>
+
+        <span class="c1"># try and get the file writer</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file_writers</span><span class="p">[</span><span class="n">file_type</span><span class="p">]</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
+                    <span class="n">writer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(),</span> <span class="n">output</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;driver&quot;</span><span class="p">})</span>
+                    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;driver&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">value</span>
+                    <span class="n">writer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedFiletypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested file type </span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s2"> is not supported, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;currently we can write to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_writers</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Export the current model to file this will include the workflow as well along with each components settings.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_name</code></td>
+<td><code>str</code></td>
+<td>The name of the file the settings and workflow should be exported to.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnsupportedFiletypeError</code></td>
+<td>When the file type requested is not supported.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.export_workflow"><code class="codehilite"><span class="n">export_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.export_workflow" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">export_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Export the workflow components and their settings to file so that they can be loaded latter.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            file_name: The name of the file the workflow should be exported to.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            UnsupportedFiletypeError: If the file type is not supported.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">file_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_file_type</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="n">file_name</span><span class="p">)</span>
+
+        <span class="c1"># try and get the file writer</span>
+        <span class="n">workflow</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">()[</span><span class="s2">&quot;workflow&quot;</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file_writers</span><span class="p">[</span><span class="n">file_type</span><span class="p">]</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">output</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
+                    <span class="n">writer</span><span class="p">(</span><span class="n">workflow</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">writer</span><span class="p">(</span><span class="n">workflow</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedFiletypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested file type </span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s2"> is not supported, &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;currently we can write to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_file_writers</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Export the workflow components and their settings to file so that they can be loaded latter.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_name</code></td>
+<td><code>str</code></td>
+<td>The name of the file the workflow should be exported to.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UnsupportedFiletypeError</code></td>
+<td>If the file type is not supported.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.get_workflow_component"><code class="codehilite"><span class="n">get_workflow_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">component_name</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.get_workflow_component" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">get_workflow_component</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">component_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">CustomWorkflowComponent</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find the workflow component by its component_name attribute.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            component_name: The name of the component to be gathered from the workflow.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The instance of the requested component from the workflow.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            MissingWorkflowComponentError: If the component could not be found by its component name in the workflow.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">component</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">component_name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">component</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MissingWorkflowComponentError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested component </span><span class="si">{</span><span class="n">component_name</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;was not registered into the workflow.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">component</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Find the workflow component by its component_name attribute.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>component_name</code></td>
+<td><code>str</code></td>
+<td>The name of the component to be gathered from the workflow.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CustomWorkflowComponent</code></td>
+<td>The instance of the requested component from the workflow.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MissingWorkflowComponentError</code></td>
+<td>If the component could not be found by its component name in the workflow.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.import_settings"><code class="codehilite"><span class="n">import_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">clear_workflow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.import_settings" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">import_settings</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">],</span> <span class="n">clear_workflow</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Import settings and workflow from a file.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            settings: The name of the file the settings should be extracted from or the reference to a settings</span>
+<span class="sd">                dictionary.</span>
+<span class="sd">            clear_workflow: If the current workflow should be extended or replaced.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_file</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+
+            <span class="c1"># take the workflow out and import the settings</span>
+            <span class="n">workflow</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;workflow&quot;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">workflow</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;workflow&quot;</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">settings</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The input type could not be converted into a settings dictionary.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="c1"># now set the factory meta settings</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+        <span class="c1"># now we want to add the workflow back in</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">import_workflow</span><span class="p">(</span><span class="n">workflow</span><span class="o">=</span><span class="n">workflow</span><span class="p">,</span> <span class="n">clear_existing</span><span class="o">=</span><span class="n">clear_workflow</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Import settings and workflow from a file.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>settings</code></td>
+<td><code>Union[str, Dict]</code></td>
+<td>The name of the file the settings should be extracted from or the reference to a settings dictionary.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>clear_workflow</code></td>
+<td><code>bool</code></td>
+<td>If the current workflow should be extended or replaced.</td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.import_workflow"><code class="codehilite"><span class="n">import_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">clear_existing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.import_workflow" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">import_workflow</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">workflow</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">],</span> <span class="n">clear_existing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instance the workflow from a workflow object or from an input file.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            workflow: The name of the file the workflow should be created from or a workflow dictionary.</span>
+<span class="sd">            clear_existing: If the current workflow should be deleted and replaced or extended.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">clear_existing</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clear_workflow</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">workflow</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">workflow</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_file</span><span class="p">(</span><span class="n">workflow</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">workflow</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="c1"># this should be a workflow dict that we can just load</span>
+            <span class="c1"># if this is from the settings file make sure to unpack the dict first.</span>
+            <span class="n">workflow</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;workflow&quot;</span><span class="p">,</span> <span class="n">workflow</span><span class="p">)</span>
+
+        <span class="c1"># load in the workflow</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">workflow</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># check if this is not the first instance of the component</span>
+            <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">key</span>
+            <span class="n">component</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">workflow_components</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">component</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="n">component</span><span class="o">.</span><span class="n">parse_obj</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Instance the workflow from a workflow object or from an input file.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>workflow</code></td>
+<td><code>Union[str, Dict]</code></td>
+<td>The name of the file the workflow should be created from or a workflow dictionary.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>clear_existing</code></td>
+<td><code>bool</code></td>
+<td>If the current workflow should be deleted and replaced or extended.</td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.provenance" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the provenance of qcsubmit that created that molecule input data.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A dict of the provenance information.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            We can not check which toolkit was used to generate the Cmiles data be we know that openeye will always be</span>
+<span class="sd">            used first when available.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">import</span> <span class="nn">openforcefield</span>
+        <span class="kn">import</span> <span class="nn">qcsubmit</span>
+
+        <span class="n">provenance</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;qcsubmit&quot;</span><span class="p">:</span> <span class="n">qcsubmit</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span>
+            <span class="s2">&quot;openforcefield&quot;</span><span class="p">:</span> <span class="n">openforcefield</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">provenance</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create the provenance of qcsubmit that created that molecule input data.
+<strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict[str, str]</code></td>
+<td>A dict of the provenance information.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We can not check which toolkit was used to generate the Cmiles data be we know that openeye will always be
+used first when available.</p>
+</div>
+</div>
+<h3 id="qcsubmit.factories.BasicDatasetFactory.remove_workflow_component"><code class="codehilite"><span class="n">remove_workflow_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">component_name</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.BasicDatasetFactory.remove_workflow_component" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">remove_workflow_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">component_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find and remove the component via its component_name attribute.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            component_name: The name of the component to be gathered from the workflow.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            MissingWorkflowComponentError: If the component could not be found by its component name in the workflow.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="p">[</span><span class="n">component_name</span><span class="p">]</span>
+
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MissingWorkflowComponentError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested component </span><span class="si">{</span><span class="n">component_name</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;could not be removed as it was not registered.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Find and remove the component via its component_name attribute.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>component_name</code></td>
+<td><code>str</code></td>
+<td>The name of the component to be gathered from the workflow.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MissingWorkflowComponentError</code></td>
+<td>If the component could not be found by its component name in the workflow.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="qcsubmit.factories.OptimizationDatasetFactory"><code class="codehilite"><span class="n">OptimizationDatasetFactory</span></code><a class="headerlink" href="#qcsubmit.factories.OptimizationDatasetFactory" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>This factory produces OptimisationDatasets which include settings associated with geometric which is used to run the
+optimisation.</p>
+<h3 id="qcsubmit.factories.OptimizationDatasetFactory.add_compute"><code class="codehilite"><span class="n">add_compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.OptimizationDatasetFactory.add_compute" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_compute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FractalClient</span><span class="p">],</span>
+        <span class="n">await_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add compute to an exsiting collection of molecules.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            dataset_name:</span>
+<span class="sd">            client:</span>
+<span class="sd">            await_result:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Add compute to an exsiting collection of molecules.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset_name</code></td>
+<td><code>str</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>client</code></td>
+<td><code>Union[str, qcportal.client.FractalClient]</code></td>
+<td></td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>await_result</code></td>
+<td><code>bool</code></td>
+<td></td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 id="qcsubmit.factories.TorsiondriveDatasetFactory"><code class="codehilite"><span class="n">TorsiondriveDatasetFactory</span></code><a class="headerlink" href="#qcsubmit.factories.TorsiondriveDatasetFactory" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>This factory produces TorsiondriveDatasets which include settings associated with geometric which is used to run
+the optimisation.</p>
+<h3 id="qcsubmit.factories.TorsiondriveDatasetFactory.add_compute"><code class="codehilite"><span class="n">add_compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">await_result</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.TorsiondriveDatasetFactory.add_compute" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">add_compute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">client</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FractalClient</span><span class="p">],</span>
+        <span class="n">await_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+</div>
+<h3 id="qcsubmit.factories.TorsiondriveDatasetFactory.create_dataset"><code class="codehilite"><span class="n">create_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">molecules</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_dataset" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">molecules</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">],</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">],</span>
+        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TorsiondriveDataset</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Process the input molecules through the given workflow then create and populate the torsiondrive</span>
+<span class="sd">        dataset class which acts as a local representation for the collection in qcarchive and has the ability to</span>
+<span class="sd">        submit its self to a local or public instance.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            The torsiondrive dataset allows for multiple starting geometries.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            Any molecules with linear torsions identified for torsion driving will be removed and failed from the</span>
+<span class="sd">            workflow.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            If fragmentation is used each molecule in the dataset will have the torsion indexes already set else indexes</span>
+<span class="sd">            are generated for each rotatable torsion in the molecule.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">             dataset_name: The name that will be given to the collection on submission to an archive instance.</span>
+<span class="sd">             molecules: The list of molecules which should be processed by the workflow and added to the dataset, this</span>
+<span class="sd">                can also be a file name which is to be unpacked by the openforcefield toolkit.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A [DataSet][qcsubmit.datasets.TorsiondriveDataset] instance populated with the molecules that have passed</span>
+<span class="sd">            through the workflow.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># create the initial component result</span>
+        <span class="n">workflow_molecules</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_initial_component_result</span><span class="p">(</span><span class="n">molecules</span><span class="o">=</span><span class="n">molecules</span><span class="p">)</span>
+
+        <span class="c1"># cach any linear torsions here</span>
+        <span class="n">linear_torsions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;component_name&quot;</span><span class="p">:</span> <span class="s2">&quot;LinearTorsionRemoval&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;component_description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;component_description&quot;</span><span class="p">:</span> <span class="s2">&quot;Remove any molecules with a linear torsions selected to drive.&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;component_provenance&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">(),</span>
+            <span class="s2">&quot;molecules&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="p">}</span>
+
+        <span class="c1"># first we need to instance the dataset and assign the metadata</span>
+        <span class="n">object_meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;workflow&quot;</span><span class="p">})</span>
+
+        <span class="c1"># the only data missing is the collection name so add it here.</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;dataset_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset_name</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())}</span>
+        <span class="n">object_meta</span><span class="p">[</span><span class="s2">&quot;provenance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">provenance</span><span class="p">()</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dataset_type</span><span class="p">(</span><span class="o">**</span><span class="n">object_meta</span><span class="p">)</span>
+
+        <span class="c1"># if the workflow has components run it</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">component_name</span><span class="p">,</span> <span class="n">component</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">workflow</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">workflow_molecules</span> <span class="o">=</span> <span class="n">component</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                    <span class="n">molecules</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">molecules</span>
+                <span class="p">)</span>
+
+                <span class="n">dataset</span><span class="o">.</span><span class="n">filter_molecules</span><span class="p">(</span>
+                    <span class="n">molecules</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">filtered</span><span class="p">,</span>
+                    <span class="n">component_name</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_name</span><span class="p">,</span>
+                    <span class="n">component_description</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_description</span><span class="p">,</span>
+                    <span class="n">component_provenance</span><span class="o">=</span><span class="n">workflow_molecules</span><span class="o">.</span><span class="n">component_provenance</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="c1"># now add the molecules to the correct attributes</span>
+        <span class="k">for</span> <span class="n">molecule</span> <span class="ow">in</span> <span class="n">workflow_molecules</span><span class="o">.</span><span class="n">molecules</span><span class="p">:</span>
+
+            <span class="c1"># check if there are any linear torsions in the molecule</span>
+            <span class="n">linear_bonds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_detect_linear_torsions</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+
+            <span class="c1"># check for extras and keywords</span>
+            <span class="n">extras</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;extras&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="n">keywords</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;keywords&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+            <span class="c1"># check if the molecule has an atom map or dihedrals defined</span>
+            <span class="k">if</span> <span class="s2">&quot;atom_map&quot;</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">:</span>
+                <span class="c1"># we need to check the map and convert it to use the dihedrals method</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                    <span class="c1"># the map is for the correct amount of atoms</span>
+                    <span class="n">atom_map</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;atom_map&quot;</span><span class="p">)</span>
+                    <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;dihedrals&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="nb">tuple</span><span class="p">(</span><span class="n">atom_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span> <span class="kc">None</span><span class="p">}</span>
+
+            <span class="c1"># make the general attributes</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_cmiles_metadata</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+
+            <span class="c1"># now check for the dihedrals</span>
+            <span class="k">if</span> <span class="s2">&quot;dihedrals&quot;</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">dihedral</span><span class="p">,</span> <span class="n">dihedral_range</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span>
+                    <span class="s2">&quot;dihedrals&quot;</span>
+                <span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="c1"># check for a 2d torsion scan</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dihedral</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+                        <span class="c1"># create the dihedrals list of tuples</span>
+                        <span class="n">dihedrals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">dihedral</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">dihedral</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">])]</span>
+                    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">dihedral</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+                        <span class="n">dihedrals</span> <span class="o">=</span> <span class="p">[</span><span class="n">dihedral</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">continue</span>
+
+                    <span class="k">for</span> <span class="n">torsion</span> <span class="ow">in</span> <span class="n">dihedrals</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="p">(</span>
+                            <span class="n">torsion</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">linear_bonds</span>
+                            <span class="ow">or</span> <span class="n">torsion</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">linear_bonds</span>
+                        <span class="p">):</span>
+                            <span class="n">linear_torsions</span><span class="p">[</span><span class="s2">&quot;molecules&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">molecule</span><span class="p">)</span>
+                            <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># create the index</span>
+                        <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                            <span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dihedral</span><span class="p">)</span>
+                        <span class="p">)</span>
+                        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_index</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">)</span>
+                        <span class="k">del</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">]</span>
+
+                        <span class="n">keywords</span><span class="p">[</span><span class="s2">&quot;dihedral_ranges&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dihedral_range</span>
+                        <span class="n">dataset</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span>
+                            <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+                            <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                            <span class="n">attributes</span><span class="o">=</span><span class="n">attributes</span><span class="p">,</span>
+                            <span class="n">dihedrals</span><span class="o">=</span><span class="n">dihedrals</span><span class="p">,</span>
+                            <span class="n">keywords</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span>
+                            <span class="n">extras</span><span class="o">=</span><span class="n">extras</span><span class="p">,</span>
+                        <span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># the molecule has not had its atoms identified yet so process them here</span>
+                <span class="c1"># order the molecule</span>
+                <span class="n">order_mol</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">canonical_order_atoms</span><span class="p">()</span>
+                <span class="n">rotatble_bonds</span> <span class="o">=</span> <span class="n">order_mol</span><span class="o">.</span><span class="n">find_rotatable_bonds</span><span class="p">()</span>
+                <span class="n">attributes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_cmiles_metadata</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">rotatble_bonds</span><span class="p">:</span>
+                    <span class="c1"># create a torsion to hold as fixed using non-hydrogen atoms</span>
+                    <span class="n">torsion_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_torsion_string</span><span class="p">(</span><span class="n">bond</span><span class="p">)</span>
+                    <span class="n">order_mol</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                        <span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">atom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">torsion_index</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    <span class="n">dataset</span><span class="o">.</span><span class="n">add_molecule</span><span class="p">(</span>
+                        <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">create_index</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">),</span>
+                        <span class="n">molecule</span><span class="o">=</span><span class="n">order_mol</span><span class="p">,</span>
+                        <span class="n">attributes</span><span class="o">=</span><span class="n">attributes</span><span class="p">,</span>
+                        <span class="n">dihedrals</span><span class="o">=</span><span class="p">[</span><span class="n">torsion_index</span><span class="p">],</span>
+                        <span class="n">extras</span><span class="o">=</span><span class="n">extras</span><span class="p">,</span>
+                    <span class="p">)</span>
+
+        <span class="c1"># now we need to filter the linear molecules</span>
+        <span class="n">dataset</span><span class="o">.</span><span class="n">filter_molecules</span><span class="p">(</span><span class="o">**</span><span class="n">linear_torsions</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dataset</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Process the input molecules through the given workflow then create and populate the torsiondrive
+dataset class which acts as a local representation for the collection in qcarchive and has the ability to
+submit its self to a local or public instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The torsiondrive dataset allows for multiple starting geometries.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Any molecules with linear torsions identified for torsion driving will be removed and failed from the
+workflow.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If fragmentation is used each molecule in the dataset will have the torsion indexes already set else indexes
+are generated for each rotatable torsion in the molecule.</p>
+</div>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dataset_name</code></td>
+<td><code>str</code></td>
+<td>The name that will be given to the collection on submission to an archive instance.</td>
+<td><em>required</em></td>
+</tr>
+<tr>
+<td><code>molecules</code></td>
+<td><code>Union[str, List[openforcefield.topology.molecule.Molecule], openforcefield.topology.molecule.Molecule]</code></td>
+<td>The list of molecules which should be processed by the workflow and added to the dataset, this can also be a file name which is to be unpacked by the openforcefield toolkit.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TorsiondriveDataset</code></td>
+<td>A <a href="None#qcsubmit.datasets.TorsiondriveDataset">DataSet</a> instance populated with the molecules that have passed     through the workflow.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qcsubmit.factories.TorsiondriveDatasetFactory.create_index"><code class="codehilite"><span class="n">create_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.factories.TorsiondriveDatasetFactory.create_index" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/factories.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>901
+902
+903
+904
+905
+906
+907
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
+919
+920
+921
+922
+923</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">create_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecule</span><span class="p">:</span> <span class="n">off</span><span class="o">.</span><span class="n">Molecule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a specific torsion index for the molecule, this will use the atom map on the molecule.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            molecule:  The molecule for which the dataset index will be generated.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The canonical mapped isomeric smiles, where the mapped indices are on the atoms in the torsion.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            This dataset uses a non-standard indexing with 4 atom mapped indices representing the atoms in the torsion</span>
+<span class="sd">            to be rotated.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="s2">&quot;atom_map&quot;</span> <span class="ow">in</span> <span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">4</span>
+            <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;atom_map&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">8</span>
+        <span class="p">)</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="n">molecule</span><span class="o">.</span><span class="n">to_smiles</span><span class="p">(</span><span class="n">isomeric</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">explicit_hydrogens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mapped</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">index</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create a specific torsion index for the molecule, this will use the atom map on the molecule.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>molecule</code></td>
+<td><code>Molecule</code></td>
+<td>The molecule for which the dataset index will be generated.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>The canonical mapped isomeric smiles, where the mapped indices are on the atoms in the torsion.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This dataset uses a non-standard indexing with 4 atom mapped indices representing the atoms in the torsion
+to be rotated.</p>
+</div>
+</div>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Collecting_results/" title="Collecting Results" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Collecting Results
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../datasets/" title="Datasets" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Datasets
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

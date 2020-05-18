@@ -1,0 +1,1060 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Procedures - QCSubmit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qcsubmit.procedures.GeometricProcedure" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="QCSubmit" aria-label="QCSubmit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QCSubmit
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Procedures
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="QCSubmit" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QCSubmit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Notebooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Collecting_results/" title="Collecting Results" class="md-nav__link">
+      Collecting Results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../factories/" title="Factories" class="md-nav__link">
+      Factories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Procedures
+      </label>
+    
+    <a href="./" title="Procedures" class="md-nav__link md-nav__link--active">
+      Procedures
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure" class="md-nav__link">
+    GeometricProcedure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_convergence_set" class="md-nav__link">
+    check_convergence_set()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_coordsys" class="md-nav__link">
+    check_coordsys()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_program" class="md-nav__link">
+    check_program()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.from_opt_spec" class="md-nav__link">
+    from_opt_spec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.get_optimzation_spec" class="md-nav__link">
+    get_optimzation_spec()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Workflow Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Workflow Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_component/" title="Base Component" class="md-nav__link">
+      Base Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filters/" title="Filters" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conformer_generation/" title="Conformer Generation" class="md-nav__link">
+      Conformer Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state_enumeration/" title="State Enumeration" class="md-nav__link">
+      State Enumeration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure" class="md-nav__link">
+    GeometricProcedure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_convergence_set" class="md-nav__link">
+    check_convergence_set()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_coordsys" class="md-nav__link">
+    check_coordsys()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.check_program" class="md-nav__link">
+    check_program()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.from_opt_spec" class="md-nav__link">
+    from_opt_spec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qcsubmit.procedures.GeometricProcedure.get_optimzation_spec" class="md-nav__link">
+    get_optimzation_spec()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/openforcefield/qcsubmit/edit/master/docs/procedures.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Procedures</h1>
+                
+                <p>The procedure settings controllers</p>
+<h2 id="qcsubmit.procedures.GeometricProcedure"><code class="codehilite"><span class="n">GeometricProcedure</span></code><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure" title="Permanent link">&para;</a></h2>
+<div class="autodoc">
+<p>This is a settings class controlling the various runtime options that can be used when running geometric.</p>
+<p>Attributes:
+    program: The name of the procedure.
+    coordsys: The name of the coordinate system which should be used during the optimisation.
+    enforce: The threshold (in a.u /rad) to activate precise constraint satisfaction.
+    epsilon: Small eigenvalue threshold.
+    reset: Reset the Hessian when the eigenvalues are under epsilon.
+    qccnv: Q-Chem style convergence criteria (i.e. gradient and either energy or displacement).
+    molcnv: Molpro style convergence criteria
+        (i.e. gradient and either energy or displacement, with different defaults).
+    check: The interval for checking the coordinate system for changes.
+    trust: Starting value of the trust radius.
+    tmax: Maximum value of trust radius.
+    maxiter: Maximum number of optimization cycles.
+    convergence_set: The set of convergence criteria to be used for the optimisation.</p>
+<h3 id="qcsubmit.procedures.GeometricProcedure.check_convergence_set"><code class="codehilite"><span class="n">check_convergence_set</span><span class="p">(</span><span class="n">convergence</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure.check_convergence_set" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/procedures.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;convergence_set&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_convergence_set</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">convergence</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ensure a valid convergence set of criteria has been passed.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            convergence: The convergence criteria set, see below for allowed values.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the convergence set is not supported.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            Geometric currently accepts the following convergence criteria sets:</span>
+
+<span class="sd">            | Set  | Set Name  | Energy  | GRMS  | GMAX  | DRMS  | DMAX  |</span>
+<span class="sd">            |---|---|---|---|---|---|---|</span>
+<span class="sd">            | `GAU` | Gaussian default  | 1e-6  | 3e-4  | 4.5e-4  | 1.2e-3  | 1.8e-3  |</span>
+<span class="sd">            | `NWCHEM_LOOSE` | NW-Chem loose  | 1e-6  | 3e-3  | 4.5e-3  | 3.6e-3  | 5.4e-3  |</span>
+<span class="sd">            | `GAU_LOOSE` | Gaussian loose  | 1e-6  | 1.7e-3  | 2.5e-3  | 6.7e-3  | 1e-2  |</span>
+<span class="sd">            | `TURBOMOLE` | Turbomole default | 1e-6 | 5e-4 | 1e-3 | 5.0e-4 | 1e-3 |</span>
+<span class="sd">            | `INTERFRAG_TIGHT` | Interfrag tight | 1e-6 | 1e-5 | 1.5e-5 | 4.0e-4 | 6.0e-4 |</span>
+<span class="sd">            | `GAU_TIGHT` | Gaussian tight | 1e-6 | 1e-5 | 1.5e-5 | 4e-5 | 6e-5 |</span>
+<span class="sd">            | `GAU_VERYTIGHT` | Gaussian very tight | 1e-6 | 1e-6 | 2e-6 | 4e-6 | 6e-6 |</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">allowed_convergence</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;GAU&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;NWCHEM_LOOSE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GAU_LOOSE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;TURBOMOLE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;INTERFRAG_TIGHT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GAU_TIGHT&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GAU_VERYTIGHT&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="n">convergence</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="n">allowed_convergence</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">convergence</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The requested convergence set </span><span class="si">{</span><span class="n">convergence</span><span class="si">}</span><span class="s2"> is not supported.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Ensure a valid convergence set of criteria has been passed.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>convergence</code></td>
+<td><code>str</code></td>
+<td>The convergence criteria set, see below for allowed values.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>If the convergence set is not supported.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Geometric currently accepts the following convergence criteria sets:</p>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Set Name</th>
+<th>Energy</th>
+<th>GRMS</th>
+<th>GMAX</th>
+<th>DRMS</th>
+<th>DMAX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GAU</code></td>
+<td>Gaussian default</td>
+<td>1e-6</td>
+<td>3e-4</td>
+<td>4.5e-4</td>
+<td>1.2e-3</td>
+<td>1.8e-3</td>
+</tr>
+<tr>
+<td><code>NWCHEM_LOOSE</code></td>
+<td>NW-Chem loose</td>
+<td>1e-6</td>
+<td>3e-3</td>
+<td>4.5e-3</td>
+<td>3.6e-3</td>
+<td>5.4e-3</td>
+</tr>
+<tr>
+<td><code>GAU_LOOSE</code></td>
+<td>Gaussian loose</td>
+<td>1e-6</td>
+<td>1.7e-3</td>
+<td>2.5e-3</td>
+<td>6.7e-3</td>
+<td>1e-2</td>
+</tr>
+<tr>
+<td><code>TURBOMOLE</code></td>
+<td>Turbomole default</td>
+<td>1e-6</td>
+<td>5e-4</td>
+<td>1e-3</td>
+<td>5.0e-4</td>
+<td>1e-3</td>
+</tr>
+<tr>
+<td><code>INTERFRAG_TIGHT</code></td>
+<td>Interfrag tight</td>
+<td>1e-6</td>
+<td>1e-5</td>
+<td>1.5e-5</td>
+<td>4.0e-4</td>
+<td>6.0e-4</td>
+</tr>
+<tr>
+<td><code>GAU_TIGHT</code></td>
+<td>Gaussian tight</td>
+<td>1e-6</td>
+<td>1e-5</td>
+<td>1.5e-5</td>
+<td>4e-5</td>
+<td>6e-5</td>
+</tr>
+<tr>
+<td><code>GAU_VERYTIGHT</code></td>
+<td>Gaussian very tight</td>
+<td>1e-6</td>
+<td>1e-6</td>
+<td>2e-6</td>
+<td>4e-6</td>
+<td>6e-6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h3 id="qcsubmit.procedures.GeometricProcedure.check_coordsys"><code class="codehilite"><span class="n">check_coordsys</span><span class="p">(</span><span class="n">coordsys</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure.check_coordsys" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/procedures.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;coordsys&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_coordsys</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">coordsys</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make sure the user is assigning a valid geometric coordinate system.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            coordsys: The coordinate system to be used during optimisation.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: If the coordinate system is not supported by geometric.</span>
+
+<span class="sd">        Important:</span>
+<span class="sd">            The coordinate systems supported by geometric are:</span>
+
+<span class="sd">            - `cart` Cartesian</span>
+<span class="sd">            - `prim` Primitive a.k.a redundant</span>
+<span class="sd">            - `dlc` Delocalised Internal Coordinates</span>
+<span class="sd">            - `hdlc` Hybrid Delocalised Internal Coordinates</span>
+<span class="sd">            - `tric` Translation-Rotation-Internal Coordinates, this is the default default</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">allowed_coordsys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;cart&quot;</span><span class="p">,</span> <span class="s2">&quot;prim&quot;</span><span class="p">,</span> <span class="s2">&quot;dlc&quot;</span><span class="p">,</span> <span class="s2">&quot;hdlc&quot;</span><span class="p">,</span> <span class="s2">&quot;tric&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">coordsys</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">allowed_coordsys</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">coordsys</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">coordsys</span><span class="si">}</span><span class="s2"> is not supported by geometric please pass a valid coordinate system.&quot;</span>
+            <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Make sure the user is assigning a valid geometric coordinate system.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coordsys</code></td>
+<td><code>str</code></td>
+<td>The coordinate system to be used during optimisation.</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exceptions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ValueError</code></td>
+<td>If the coordinate system is not supported by geometric.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The coordinate systems supported by geometric are:</p>
+<ul>
+<li><code>cart</code> Cartesian</li>
+<li><code>prim</code> Primitive a.k.a redundant</li>
+<li><code>dlc</code> Delocalised Internal Coordinates</li>
+<li><code>hdlc</code> Hybrid Delocalised Internal Coordinates</li>
+<li><code>tric</code> Translation-Rotation-Internal Coordinates, this is the default default</li>
+</ul>
+</div>
+</div>
+<h3 id="qcsubmit.procedures.GeometricProcedure.check_program"><code class="codehilite"><span class="n">check_program</span><span class="p">(</span><span class="n">program</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure.check_program" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/procedures.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;program&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_program</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">program</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The program should not be changed from geometric.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;geometric&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;geometric&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>The program should not be changed from geometric.</p>
+</div>
+<h3 id="qcsubmit.procedures.GeometricProcedure.from_opt_spec"><code class="codehilite"><span class="n">from_opt_spec</span><span class="p">(</span><span class="n">optimization_specification</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure.from_opt_spec" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/procedures.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_opt_spec</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">optimization_specification</span><span class="p">:</span> <span class="n">OptimizationSpecification</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;GeometricProcedure&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a geometric procedure from an Optimization spec.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">optimization_specification</span><span class="o">.</span><span class="n">keywords</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">GeometricProcedure</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">optimization_specification</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;program&quot;</span><span class="p">})</span>
+            <span class="k">return</span> <span class="n">GeometricProcedure</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;keywords&quot;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create a geometric procedure from an Optimization spec.</p>
+</div>
+<h3 id="qcsubmit.procedures.GeometricProcedure.get_optimzation_spec"><code class="codehilite"><span class="n">get_optimzation_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.procedures.GeometricProcedure.get_optimzation_spec" title="Permanent link">&para;</a></h3>
+<div class="autodoc">
+<details class="note"><summary>Show source code in <code>qcsubmit/procedures.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">get_optimzation_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OptimizationSpecification</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create the optimization specification to be used in qcarchive.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A dictionary representation of the optimization specification.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">exclude</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;program&quot;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">constraints</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">exclude</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;constraints&quot;</span><span class="p">)</span>
+
+        <span class="n">opt_spec</span> <span class="o">=</span> <span class="n">OptimizationSpecification</span><span class="p">(</span>
+            <span class="n">program</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="p">,</span> <span class="n">keywords</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">opt_spec</span>
+</code></pre></div>
+</td></tr></table>
+
+</details>
+<p>Create the optimization specification to be used in qcarchive.</p>
+<p><strong>Returns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OptimizationSpecification</code></td>
+<td>A dictionary representation of the optimization specification.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../exceptions/" title="Exceptions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Exceptions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../base_component/" title="Base Component" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Base Component
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
