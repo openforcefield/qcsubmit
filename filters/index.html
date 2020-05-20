@@ -117,31 +117,6 @@
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -257,6 +232,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating_workflows/" title="Creating Workflows" class="md-nav__link">
+      Creating Workflows
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -301,8 +288,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../datasets/" title="datasets.py" class="md-nav__link">
-      datasets.py
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
     </a>
   </li>
 
@@ -714,7 +701,8 @@ parameter in both sets is failed.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.CoverageFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.CoverageFilter.apply" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>241
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>240
+241
 242
 243
 244
@@ -752,8 +740,7 @@ parameter in both sets is failed.</p>
 276
 277
 278
-279
-280</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+279</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Apply the filter to the list of molecules to remove any molecules typed by an id that is not allowed, i.e. not</span>
 <span class="sd">        included in the allowed list.</span>
@@ -836,7 +823,8 @@ included in the allowed list.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.CoverageFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.CoverageFilter.provenance" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>282
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>281
+282
 283
 284
 285
@@ -847,8 +835,7 @@ included in the allowed list.</p>
 290
 291
 292
-293
-294</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+293</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate version information for all of the software used during the running of this component.</span>
 
@@ -909,7 +896,8 @@ common internal format as required.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.ElementFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.apply" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>160
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>159
+160
 161
 162
 163
@@ -939,8 +927,7 @@ common internal format as required.</p>
 187
 188
 189
-190
-191</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+190</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The common entry point of all workflow components which applies the workflow component to the given list of</span>
 <span class="sd">        molecules.</span>
@@ -1015,7 +1002,8 @@ molecules.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements"><code class="codehilite"><span class="n">check_allowed_elements</span><span class="p">(</span><span class="n">element</span><span class="p">)</span></code> <em>(classmethod)</em><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.check_allowed_elements" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>136
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>135
+136
 137
 138
 139
@@ -1036,8 +1024,7 @@ molecules.</p>
 154
 155
 156
-157
-158</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;allowed_elements&quot;</span><span class="p">,</span> <span class="n">each_item</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+157</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;allowed_elements&quot;</span><span class="p">,</span> <span class="n">each_item</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">check_allowed_elements</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">element</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check that each item can be cast to a valid element.</span>
@@ -1102,7 +1089,8 @@ molecules.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.ElementFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.ElementFilter.provenance" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>193
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>192
+193
 194
 195
 196
@@ -1117,8 +1105,7 @@ molecules.</p>
 205
 206
 207
-208
-209</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+208</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate version information for all of the software used during the running of this component.</span>
 
@@ -1201,8 +1188,7 @@ molecules.</p>
 64
 65
 66
-67
-68</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+67</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The common entry point of all workflow components which applies the workflow component to the given list of</span>
 <span class="sd">        molecules.</span>
@@ -1213,7 +1199,6 @@ molecules.</p>
 <span class="sd">        Returns:</span>
 <span class="sd">            A [ComponentResult][qcsubmit.datasets.ComponentResult] instance containing information about the molecules</span>
 <span class="sd">            that passed and were filtered by the component and details about the component which generated the result.</span>
-<span class="sd">            [qcsubmit.datasets.ComponentResult]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">unit</span>
@@ -1269,14 +1254,15 @@ molecules.</p>
 <tbody>
 <tr>
 <td><code>ComponentResult</code></td>
-<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.     <a href="None#qcsubmit.datasets.ComponentResult">qcsubmit.datasets.ComponentResult</a></td>
+<td>A <a href="None#qcsubmit.datasets.ComponentResult">ComponentResult</a> instance containing information about the molecules     that passed and were filtered by the component and details about the component which generated the result.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance"><code class="codehilite"><span class="n">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.MolecularWeightFilter.provenance" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>70
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>69
+70
 71
 72
 73
@@ -1291,8 +1277,7 @@ molecules.</p>
 82
 83
 84
-85
-86</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+85</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">provenance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate version information for all of the software used during the running of this component.</span>
 
@@ -1345,7 +1330,8 @@ openforcefield.topology.Molecule class.</p>
 </div>
 <h3 id="qcsubmit.workflow_components.filters.RotorFilter.apply"><code class="codehilite"><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">)</span></code><a class="headerlink" href="#qcsubmit.workflow_components.filters.RotorFilter.apply" title="Permanent link">&para;</a></h3>
 <div class="autodoc">
-<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>314
+<details class="note"><summary>Show source code in <code>workflow_components/filters.py</code></summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>313
+314
 315
 316
 317
@@ -1368,8 +1354,7 @@ openforcefield.topology.Molecule class.</p>
 334
 335
 336
-337
-338</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
+337</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">molecules</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Molecule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ComponentResult</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Apply the filter to the list of molecules to remove any molecules with more rotors then the maximum allowed</span>
 <span class="sd">        number.</span>

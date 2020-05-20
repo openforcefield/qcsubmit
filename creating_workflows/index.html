@@ -1,0 +1,1414 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Creating Workflows - QCSubmit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#creating-submission-workflows-using-qcsubmit" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="QCSubmit" aria-label="QCSubmit" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QCSubmit
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Creating Workflows
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="QCSubmit" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QCSubmit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/openforcefield/qcsubmit/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    openforcefield/qcsubmit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Notebooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Collecting_results/" title="Collecting Results" class="md-nav__link">
+      Collecting Results
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Creating Workflows" class="md-nav__link md-nav__link--active">
+      Creating Workflows
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../factories/" title="Factories" class="md-nav__link">
+      Factories
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exceptions/" title="Exceptions" class="md-nav__link">
+      Exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../procedures/" title="Procedures" class="md-nav__link">
+      Procedures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Workflow Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Workflow Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_component/" title="Base Component" class="md-nav__link">
+      Base Component
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filters/" title="Filters" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conformer_generation/" title="Conformer Generation" class="md-nav__link">
+      Conformer Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state_enumeration/" title="State Enumeration" class="md-nav__link">
+      State Enumeration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/openforcefield/qcsubmit/edit/master/docs/creating_workflows.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h1 id="creating-submission-workflows-using-qcsubmit">Creating submission workflows using qcsubmit.<a class="headerlink" href="#creating-submission-workflows-using-qcsubmit" title="Permanent link">&para;</a></h1>
+<p>Here we aim to create reproducible workflows which can process large lists of molecules applying filtering and some other useful operations 
+such as state enumeration and fragmentation before formatting the data into an qcarchive dataset that can be 
+submitted to the public or local archive instance. </p>
+<p>The entire workflow is build up out of modular components which can each have programable settings which can be 
+controlled through the API or via workflow yaml/json files. </p>
+<p>In this example, we will demonstrate how to set up a basic workflow via the API and how it can be exported to a settings file 
+which can then be used to reconstruct the entire workflow by another user.</p>
+<p>First lets load in the packages.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">qcsubmit.factories</span> <span class="kn">import</span> <span class="n">BasicDatasetFactory</span>  <span class="c1"># load in the factory to process molecules</span>
+<span class="kn">from</span> <span class="nn">qcsubmit</span> <span class="kn">import</span> <span class="n">workflow_components</span>                <span class="c1"># load in a list of workflow_components</span>
+<span class="kn">from</span> <span class="nn">openforcefield.utils.utils</span> <span class="kn">import</span> <span class="n">get_data_file_path</span>  <span class="c1"># a util function to load a mini drug bank file</span>
+<span class="kn">from</span> <span class="nn">openforcefield.topology</span> <span class="kn">import</span> <span class="n">Molecule</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Create the basic qcarchive dataset factory, this is useful for large machine learning datasets which are a collection
+of single point calculations provided through the energy/gradient/hessian drivers.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">factory</span> <span class="o">=</span> <span class="n">BasicDatasetFactory</span><span class="p">()</span>
+<span class="c1"># we can view and change any of the basic settings in the factory such as the qm settings</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="s1">&#39;torchani&#39;</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;ANI1ccx&#39;</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="s1">&#39;energy&#39;</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">spec_description</span> <span class="o">=</span> <span class="s2">&quot;ANI1ccx standard specification&quot;</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">spec_name</span> <span class="o">=</span> <span class="s2">&quot;ani1ccx&quot;</span>
+<span class="c1"># lets look at the class and the settings </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>method=&#39;ANI1ccx&#39; basis=None program=&#39;torchani&#39; maxiter=200 driver=&lt;DriverEnum.energy: &#39;energy&#39;&gt; scf_properties=[&#39;dipole&#39;, &#39;qudrupole&#39;, &#39;wiberg_lowdin_indices&#39;] spec_name=&#39;ani1ccx&#39; spec_description=&#39;ANI1ccx standard specification&#39; priority=&#39;normal&#39; dataset_tags=[&#39;openff&#39;] compute_tag=&#39;openff&#39; workflow={}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># each of the fields are also validated as the class is based on pydantic</span>
+<span class="c1"># so the following should produce and error</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;test&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValidationError</span>                           Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-5e3125855464&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># each of the fields are also validated as the class is based on pydantic</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># so the following should produce and error</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>factory<span class="ansi-blue-fg">.</span>basis <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#39;test&#39;</span><span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">}</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/toolkit/lib/python3.6/site-packages/pydantic/main.cpython-36m-darwin.so</span> in <span class="ansi-cyan-fg">pydantic.main.BaseModel.__setattr__</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">ValidationError</span>: 1 validation error for BasicDatasetFactory
+basis
+  str type expected (type=type_error.str)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Note that the basic settings should be suitable in most cases as they are those recommended by the 
+openforcefield and are currently used in the fitting of the most recent force fields. Now lets look at
+the workflow components. 
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># the workflow is a dictionary that contains all of the components that will be executed in order</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">workflow</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># the workflow is also validated so only properly configured workflow components can be added</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">InvalidWorkflowComponentError</span>             Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-cd9de688167f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># the workflow is also validated so only properly configured workflow components can be added</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>factory<span class="ansi-blue-fg">.</span>add_workflow_component<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/Documents/Software/qcsubmit/qcsubmit/factories.py</span> in <span class="ansi-cyan-fg">add_workflow_component</span><span class="ansi-blue-fg">(self, components)</span>
+<span class="ansi-green-intense-fg ansi-bold">    160</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    161</span>                 raise InvalidWorkflowComponentError(
+<span class="ansi-green-fg">--&gt; 162</span><span class="ansi-red-fg">                     </span><span class="ansi-blue-fg">f&#34;Component {component} rejected as it is not a sub &#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    163</span>                     <span class="ansi-blue-fg">f&#34;class of CustomWorkflowComponent.&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    164</span>                 )
+
+<span class="ansi-red-fg">InvalidWorkflowComponentError</span>: Component 3 rejected as it is not a sub class of CustomWorkflowComponent.</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+As you can see the number is not a proper workflow component and so it has been rejected from the workflow.
+Users can make there own workflow components which can be added to the workflow as well but they must be a subclass
+of the CustomWorkflowComponent class and have all of the abstract methods implemented and settings. See the creating workflow
+components notebook for examples on how to do this.</p>
+<p>Now lets set up a workflow that will filter out some unwanted elements, then filter by molecular weight
+before generating conformers for each of the molecules.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># set up the element filter</span>
+<span class="n">el_filter</span> <span class="o">=</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">ElementFilter</span><span class="p">()</span>
+<span class="c1"># lets view the options available for this filter</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">el_filter</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>component_name=&#39;ElementFilter&#39; component_description=&#39;Filter out molecules who contain elements not in the allowed element list&#39; component_fail_message=&#39;Molecule contained elements not in the allowed elements list&#39; allowed_elements=[&#39;H&#39;, &#39;C&#39;, &#39;N&#39;, &#39;O&#39;, &#39;F&#39;, &#39;P&#39;, &#39;S&#39;, &#39;Cl&#39;, &#39;Br&#39;, &#39;I&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+This filter has the ability to filter elements by atomic name or number, we just have to supply a list of 
+symbols or numbers to the filter. Here lets only keep molecules with elements of H,C,N and O as we would like
+to use AN1 as our QM method.
+</div>
+</div></p>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># set the filter to only keep molecules with these elements</span>
+<span class="n">el_filter</span><span class="o">.</span><span class="n">allowed_elements</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># now lets add the filter to the workflow</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="n">el_filter</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now we will set up the weight filter and conformer generation components and add them to the workflow.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">weight_filter</span> <span class="o">=</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">MolecularWeightFilter</span><span class="p">()</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="n">weight_filter</span><span class="p">)</span>
+<span class="n">conf_gen</span> <span class="o">=</span> <span class="n">workflow_components</span><span class="o">.</span><span class="n">StandardConformerGenerator</span><span class="p">()</span>
+<span class="n">conf_gen</span><span class="o">.</span><span class="n">max_conformers</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">conf_gen</span><span class="o">.</span><span class="n">toolkit</span> <span class="o">=</span> <span class="s2">&quot;openeye&quot;</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">add_workflow_component</span><span class="p">(</span><span class="n">conf_gen</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now lets look at the workflow and make sure all of the components were added in correctly. Then lets save the 
+settings and workflow so they can be used again latter.</p>
+</div>
+</div>
+
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">workflow</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;ElementFilter&#39;: ElementFilter(component_name=&#39;ElementFilter&#39;, component_description=&#39;Filter out molecules who contain elements not in the allowed element list&#39;, component_fail_message=&#39;Molecule contained elements not in the allowed elements list&#39;, allowed_elements=[1, 6, 7, 8]), &#39;MolecularWeightFilter&#39;: MolecularWeightFilter(component_name=&#39;MolecularWeightFilter&#39;, component_description=&#39;Molecules are filtered based on the allowed molecular weights.&#39;, component_fail_message=&#39;Molecule weight was not in the specified region.&#39;, minimum_weight=130, maximum_weight=781), &#39;StandardConformerGenerator&#39;: StandardConformerGenerator(component_name=&#39;StandardConformerGenerator&#39;, component_description=&#39;Generate conformations for the given molecules&#39;, component_fail_message=&#39;Conformers could not be generated&#39;, toolkit=&#39;openeye&#39;, max_conformers=1, clear_existing=True)}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now we can export the workflow to either json and yaml.
+</div>
+</div></p>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># now lets save the workflow to json</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">export_settings</span><span class="p">(</span><span class="s1">&#39;work1.json&#39;</span><span class="p">)</span>
+
+<span class="c1"># and lets save to yaml</span>
+<span class="n">factory</span><span class="o">.</span><span class="n">export_settings</span><span class="p">(</span><span class="s1">&#39;work1.yaml&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+We can see how the files look here.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="err">!</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">40</span> <span class="n">work1</span><span class="o">.</span><span class="n">yaml</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>basis: null
+compute_tag: openff
+dataset_tags:
+- openff
+driver: energy
+maxiter: 200
+method: ANI1ccx
+priority: normal
+program: torchani
+scf_properties:
+- dipole
+- qudrupole
+- wiberg_lowdin_indices
+spec_description: ANI1ccx standard specification
+spec_name: ani1ccx
+workflow:
+  ElementFilter:
+    allowed_elements:
+    - 1
+    - 6
+    - 7
+    - 8
+    component_description: Filter out molecules who contain elements not in the allowed
+      element list
+    component_fail_message: Molecule contained elements not in the allowed elements
+      list
+    component_name: ElementFilter
+  MolecularWeightFilter:
+    component_description: Molecules are filtered based on the allowed molecular weights.
+    component_fail_message: Molecule weight was not in the specified region.
+    component_name: MolecularWeightFilter
+    maximum_weight: 781
+    minimum_weight: 130
+  StandardConformerGenerator:
+    clear_existing: true
+    component_description: Generate conformations for the given molecules
+    component_fail_message: Conformers could not be generated
+    component_name: StandardConformerGenerator
+    max_conformers: 1
+    toolkit: openeye
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="err">!</span> <span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">20</span> <span class="n">work1</span><span class="o">.</span><span class="n">json</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{
+  &#34;method&#34;: &#34;ANI1ccx&#34;,
+  &#34;basis&#34;: null,
+  &#34;program&#34;: &#34;torchani&#34;,
+  &#34;maxiter&#34;: 200,
+  &#34;driver&#34;: &#34;energy&#34;,
+  &#34;scf_properties&#34;: [
+    &#34;dipole&#34;,
+    &#34;qudrupole&#34;,
+    &#34;wiberg_lowdin_indices&#34;
+  ],
+  &#34;spec_name&#34;: &#34;ani1ccx&#34;,
+  &#34;spec_description&#34;: &#34;ANI1ccx standard specification&#34;,
+  &#34;priority&#34;: &#34;normal&#34;,
+  &#34;dataset_tags&#34;: [
+    &#34;openff&#34;
+  ],
+  &#34;compute_tag&#34;: &#34;openff&#34;,
+  &#34;workflow&#34;: {
+    &#34;ElementFilter&#34;: {
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now lets make a new workflow factory and load in the settings we just saved to quickly make a new workflow.</p>
+</div>
+</div>
+
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">factory2</span> <span class="o">=</span> <span class="n">BasicDatasetFactory</span><span class="p">()</span>
+
+<span class="c1"># now lets print out the basic workflow factory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">factory2</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>method=&#39;B3LYP-D3BJ&#39; basis=&#39;DZVP&#39; program=&#39;psi4&#39; maxiter=200 driver=&lt;DriverEnum.energy: &#39;energy&#39;&gt; scf_properties=[&#39;dipole&#39;, &#39;qudrupole&#39;, &#39;wiberg_lowdin_indices&#39;] spec_name=&#39;default&#39; spec_description=&#39;Standard OpenFF optimization quantum chemistry specification.&#39; priority=&#39;normal&#39; dataset_tags=[&#39;openff&#39;] compute_tag=&#39;openff&#39; workflow={}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="c1"># now load in the settings from the yaml file and print out the factory components</span>
+
+<span class="n">factory2</span><span class="o">.</span><span class="n">import_settings</span><span class="p">(</span><span class="s1">&#39;work1.yaml&#39;</span><span class="p">)</span>
+
+<span class="c1"># note that the theory has changed along with making the workflow components</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">factory2</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>method=&#39;ANI1ccx&#39; basis=None program=&#39;torchani&#39; maxiter=200 driver=&lt;DriverEnum.energy: &#39;energy&#39;&gt; scf_properties=[&#39;dipole&#39;, &#39;qudrupole&#39;, &#39;wiberg_lowdin_indices&#39;] spec_name=&#39;ani1ccx&#39; spec_description=&#39;ANI1ccx standard specification&#39; priority=&#39;normal&#39; dataset_tags=[&#39;openff&#39;] compute_tag=&#39;openff&#39; workflow={&#39;ElementFilter&#39;: ElementFilter(component_name=&#39;ElementFilter&#39;, component_description=&#39;Filter out molecules who contain elements not in the allowed element list&#39;, component_fail_message=&#39;Molecule contained elements not in the allowed elements list&#39;, allowed_elements=[1, 6, 7, 8]), &#39;MolecularWeightFilter&#39;: MolecularWeightFilter(component_name=&#39;MolecularWeightFilter&#39;, component_description=&#39;Molecules are filtered based on the allowed molecular weights.&#39;, component_fail_message=&#39;Molecule weight was not in the specified region.&#39;, minimum_weight=130, maximum_weight=781), &#39;StandardConformerGenerator&#39;: StandardConformerGenerator(component_name=&#39;StandardConformerGenerator&#39;, component_description=&#39;Generate conformations for the given molecules&#39;, component_fail_message=&#39;Conformers could not be generated&#39;, toolkit=&#39;openeye&#39;, max_conformers=1, clear_existing=True)}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now we can run the worklow on a set of molecules in the mini drug bank file that comes with the openforcefield.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">mols</span> <span class="o">=</span> <span class="n">Molecule</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">get_data_file_path</span><span class="p">(</span><span class="s1">&#39;molecules/minidrugbank.sdf&#39;</span><span class="p">),</span> <span class="n">allow_undefined_stereo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_2987
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 20, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 4, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 16, aromatic: False, chiral: True
+bond order: 1, chiral: False to atom atomic num: 8, name: , idx: 28, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_3502
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 20, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 4, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 16, aromatic: False, chiral: True
+bond order: 1, chiral: False to atom atomic num: 8, name: , idx: 28, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_4161
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 21, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 12, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 15, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 7, name: , idx: 19, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_4162
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 21, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 13, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 15, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 7, name: , idx: 19, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_6531
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 23, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 2, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 14, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 18, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_1700
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 9, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 1, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 3, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 7, aromatic: False, chiral: True
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_4662
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 26, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 2, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 3, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 20, aromatic: False, chiral: False
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># create the dataset ready for submission</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">factory2</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="s1">&#39;my_dataset&#39;</span><span class="p">,</span> <span class="n">molecules</span><span class="o">=</span><span class="n">mols</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;my test dataset.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_6531
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 23, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 2, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 14, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 18, aromatic: False, chiral: False
+
+Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): DrugBank_6531
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 23, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 2, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 14, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 18, aromatic: False, chiral: False
+
+</pre>
+</div>
+</div>
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+
+c: [0, 0]
+fc: [0, 0.0]
+m: [1]
+fm: [1, 1, 2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+We can now write out the processed dataset to file which can be loaded by another user and adapted before being submitted.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">export_dataset</span><span class="p">(</span><span class="s2">&quot;dataset_dump.json&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+The dataset and the output to file also keep a history of the workflow that was ran to generate the dataset, here each component reports its job and the settings used along with the version number of any dependencies which should help make workflows reproducable.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">components</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;component_name&#39;: &#39;ElementFilter&#39;,
+  &#39;component_description&#39;: {&#39;component_name&#39;: &#39;ElementFilter&#39;,
+   &#39;component_description&#39;: &#39;Filter out molecules who contain elements not in the allowed element list&#39;,
+   &#39;component_fail_message&#39;: &#39;Molecule contained elements not in the allowed elements list&#39;,
+   &#39;allowed_elements&#39;: [1, 6, 7, 8]},
+  &#39;component_provenance&#39;: {&#39;OpenforcefieldToolkit&#39;: &#39;0.6.0+383.g20d4b740&#39;,
+   &#39;QCSubmit&#39;: &#39;0+untagged.51.g0fb4d0d.dirty&#39;,
+   &#39;openmm_elements&#39;: &#39;7.4.1&#39;}},
+ {&#39;component_name&#39;: &#39;MolecularWeightFilter&#39;,
+  &#39;component_description&#39;: {&#39;component_name&#39;: &#39;MolecularWeightFilter&#39;,
+   &#39;component_description&#39;: &#39;Molecules are filtered based on the allowed molecular weights.&#39;,
+   &#39;component_fail_message&#39;: &#39;Molecule weight was not in the specified region.&#39;,
+   &#39;minimum_weight&#39;: 130,
+   &#39;maximum_weight&#39;: 781},
+  &#39;component_provenance&#39;: {&#39;OpenforcefieldToolkit&#39;: &#39;0.6.0+383.g20d4b740&#39;,
+   &#39;QCSubmit&#39;: &#39;0+untagged.51.g0fb4d0d.dirty&#39;,
+   &#39;openmm_units&#39;: &#39;7.4.1&#39;}},
+ {&#39;component_name&#39;: &#39;StandardConformerGenerator&#39;,
+  &#39;component_description&#39;: {&#39;component_name&#39;: &#39;StandardConformerGenerator&#39;,
+   &#39;component_description&#39;: &#39;Generate conformations for the given molecules&#39;,
+   &#39;component_fail_message&#39;: &#39;Conformers could not be generated&#39;,
+   &#39;toolkit&#39;: &#39;openeye&#39;,
+   &#39;max_conformers&#39;: 1,
+   &#39;clear_existing&#39;: True},
+  &#39;component_provenance&#39;: {&#39;OpenforcefieldToolkit&#39;: &#39;0.6.0+383.g20d4b740&#39;,
+   &#39;QCSubmit&#39;: &#39;0+untagged.51.g0fb4d0d.dirty&#39;,
+   &#39;openeye&#39;: &#39;2019.Oct.2&#39;}},
+ {&#39;component_name&#39;: &#39;QCSchemaIssues&#39;,
+  &#39;component_description&#39;: {&#39;component_description&#39;: &#39;The molecule was removed as a valid QCSchema could not be made&#39;,
+   &#39;component_name&#39;: &#39;QCSchemaIssues&#39;},
+  &#39;component_provenance&#39;: {&#39;qcsubmit&#39;: &#39;0+untagged.51.g0fb4d0d.dirty&#39;,
+   &#39;openforcefield&#39;: &#39;0.6.0+383.g20d4b740&#39;}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+The dataset also stores any molecules which were removed by a component and the component which filtered them out allowing us to make sure the component behavied as expected. Here we check if any molecules fail the conformer generation stage.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+</div>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">filtered_molecules</span><span class="p">[</span><span class="s2">&quot;StandardConformerGenerator&quot;</span><span class="p">]</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>FilterEntry(component_name=&#39;StandardConformerGenerator&#39;, component_description={&#39;component_name&#39;: &#39;StandardConformerGenerator&#39;, &#39;component_description&#39;: &#39;Generate conformations for the given molecules&#39;, &#39;component_fail_message&#39;: &#39;Conformers could not be generated&#39;, &#39;toolkit&#39;: &#39;openeye&#39;, &#39;max_conformers&#39;: 1, &#39;clear_existing&#39;: True}, component_provenance={&#39;OpenforcefieldToolkit&#39;: &#39;0.6.0+406.gf4eccafc&#39;, &#39;QCSubmit&#39;: &#39;0+untagged.62.g1d8916a.dirty&#39;, &#39;openeye&#39;: &#39;2019.Oct.2&#39;}, molecules=[&#39;[H]/C/1=C(/N=C(\\C(=C/2\\C(=C(/C(=O/C3=N/C(=C(\\C4=C(C(=C1N4[H])C([H])([H])C([H])([H])C(=O)O[H])C([H])([H])[H])/[H])/C(=C3C([H])([H])[H])C(=C([H])[H])[H])/N2[H])C(=C([H])[H])[H])C([H])([H])[H])\\[H])/C(=C([H])[H])C([H])([H])[H])\\[H]&#39;, &#39;[H]C1=C(ON=N1([H])N2C(C(OC(C2([H])[H])([H])[H])([H])[H])([H])[H])N([H])C(=O)OC([H])([H])C([H])([H])[H]&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Datasets also have some useful utility functions to give details about the submission
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">n_molecules</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>57</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">n_records</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>57</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Another helpful function is the ability to generate coverage reports for a forcefield which is built into the dataset.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">coverage</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">coverage_report</span><span class="p">([</span><span class="s1">&#39;openff-1.0.0.offxml&#39;</span><span class="p">])</span>
+<span class="n">coverage</span><span class="p">[</span><span class="s2">&quot;openff-1.0.0.offxml&quot;</span><span class="p">][</span><span class="s2">&quot;vdW&quot;</span><span class="p">]</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning (not error because allow_undefined_stereo=True): OEMol has unspecified stereochemistry. oemol.GetTitle(): 
+Problematic atoms are:
+Atom atomic num: 7, name: , idx: 23, aromatic: False, chiral: True with bonds:
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 2, aromatic: True, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 24, aromatic: False, chiral: False
+bond order: 1, chiral: False to atom atomic num: 6, name: , idx: 28, aromatic: False, chiral: False
+
+</pre>
+</div>
+</div>
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;n14&#39;,
+ &#39;n16&#39;,
+ &#39;n20&#39;,
+ &#39;n17&#39;,
+ &#39;n19&#39;,
+ &#39;n7&#39;,
+ &#39;n2&#39;,
+ &#39;n3&#39;,
+ &#39;n11&#39;,
+ &#39;n12&#39;,
+ &#39;n5&#39;,
+ &#39;n15&#39;,
+ &#39;n18&#39;,
+ &#39;n8&#39;,
+ &#39;n6&#39;,
+ &#39;n4&#39;,
+ &#39;n9&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+It may also be useful to export the molecules in the dataset to other file types that are supported within the openforcefield toolkit such as smiles inchi and inchikey, which is as easy as the following commands.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">molecules_to_file</span><span class="p">(</span><span class="s1">&#39;test.smi&#39;</span><span class="p">,</span> <span class="s1">&#39;smi&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">molecules_to_file</span><span class="p">(</span><span class="s1">&#39;test.inchi&#39;</span><span class="p">,</span> <span class="s1">&#39;inchi&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">molecules_to_file</span><span class="p">(</span><span class="s1">&#39;test.inchikey&#39;</span><span class="p">,</span> <span class="s1">&#39;inchikey&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Collecting_results/" title="Collecting Results" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Collecting Results
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../factories/" title="Factories" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Factories
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

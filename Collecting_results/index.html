@@ -113,31 +113,6 @@
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        
       </div>
       
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -262,6 +237,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating_workflows/" title="Creating Workflows" class="md-nav__link">
+      Creating Workflows
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -304,8 +291,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../datasets/" title="datasets.py" class="md-nav__link">
-      datasets.py
+    <a href="../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
     </a>
   </li>
 
@@ -457,6 +444,16 @@
 }());
 </script>
 
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Here we will look at how we can collect the results of a collection computed in the QCArchive.</p>
+<p>QCSubmit gives the ablity to download entire datasets very quickly with a simple API call and handles of the heavy lifting for us. </p>
+<p>Here we will look at downloading an optimization dataset.
+First we load the results container and start up our conection with the public archive.
+</div>
+</div></p>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -588,26 +585,34 @@
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now we can select one of the datasets to pull from.
+</div>
+</div></p>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="n">ds</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s1">&#39;OptimizationDataset&#39;</span><span class="p">,</span> <span class="s2">&quot;OpenFF Full Optimization Benchmark 1&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">ds</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_collection</span><span class="p">(</span><span class="s1">&#39;OptimizationDataset&#39;</span><span class="p">,</span> <span class="s2">&quot;OpenFF Gen 2 Opt Set 5 Bayer&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"></div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-Here we want to pull down a few optimizations from this dataset with their full trajectories.
+By default we are required to supply the client and the dataset name we whish to extract and also the name of the specification which was used to calculate the results.
 </div>
 </div></p>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">time</span> <span class="n">result</span> <span class="o">=</span> <span class="n">OptimizationCollectionResult</span><span class="o">.</span><span class="n">from_server</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="s2">&quot;OpenFF Full Optimization Benchmark 1&quot;</span><span class="p">,</span> <span class="n">spec_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">include_trajectory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">keys</span><span class="p">())[:</span><span class="mi">20</span><span class="p">])</span>
+<div class="codehilite"><pre><span></span><code><span class="o">%</span><span class="n">time</span> <span class="n">result</span> <span class="o">=</span> <span class="n">OptimizationCollectionResult</span><span class="o">.</span><span class="n">from_server</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="s2">&quot;OpenFF Gen 2 Opt Set 5 Bayer&quot;</span><span class="p">,</span> <span class="n">spec_name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">final_molecule_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
 </div>
@@ -618,10 +623,10 @@ Here we want to pull down a few optimizations from this dataset with their full 
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>requested molecules 743
-requested results 743
-CPU times: user 3.02 s, sys: 495 ms, total: 3.52 s
-Wall time: 1min 14s
+<pre>requested molecules 3638
+requested results 3638
+CPU times: user 9.99 s, sys: 2.67 s, total: 12.7 s
+Wall time: 4min 7s
 </pre>
 </div>
 </div>
@@ -629,13 +634,147 @@ Wall time: 1min 14s
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+This will download each complete optimization from the collection, by default each optimization only includes results for the initial and final molecules due to the number of records that have to collected. However we do have options to only pull the final molecule using the  <code>final_molecule_only</code> flag or the entire tranjectory for each optimisation using <code>include_trajectory</code>. We can also select a sub set of records which we would like to download.</p>
+</div>
+</div>
+<p>Now lets check the metadata for this collection, here we can check the method, basis, program and optimization specification that were supplied when computing the collection.
+</div>
+</div></p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">result</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;collection&quot;</span><span class="p">})</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;result_type&#39;: &#39;OptimizationCollection&#39;,
+ &#39;method&#39;: &#39;b3lyp-d3bj&#39;,
+ &#39;basis&#39;: &#39;dzvp&#39;,
+ &#39;dataset_name&#39;: &#39;OpenFF Gen 2 Opt Set 5 Bayer&#39;,
+ &#39;program&#39;: &#39;psi4&#39;,
+ &#39;driver&#39;: &lt;DriverEnum.gradient: &#39;gradient&#39;&gt;,
+ &#39;scf_properties&#39;: [&#39;dipole&#39;,
+  &#39;quadrupole&#39;,
+  &#39;wiberg_lowdin_indices&#39;,
+  &#39;mayer_indices&#39;],
+ &#39;maxiter&#39;: 200,
+ &#39;spec_name&#39;: &#39;default&#39;,
+ &#39;provenance&#39;: {},
+ &#39;tagline&#39;: None,
+ &#39;dataset_tags&#39;: [],
+ &#39;metadata&#39;: {},
+ &#39;description&#39;: None,
+ &#39;spec_description&#39;: &#39;Standard OpenFF optimization quantum chemistry specification.&#39;,
+ &#39;optimization_procedure&#39;: {&#39;program&#39;: &#39;geometric&#39;,
+  &#39;coordsys&#39;: &#39;tric&#39;,
+  &#39;enforce&#39;: 0.0,
+  &#39;epsilon&#39;: 1e-05,
+  &#39;reset&#39;: False,
+  &#39;qccnv&#39;: False,
+  &#39;molcnv&#39;: False,
+  &#39;check&#39;: 0,
+  &#39;trust&#39;: 0.1,
+  &#39;tmax&#39;: 0.3,
+  &#39;maxiter&#39;: 300,
+  &#39;convergence_set&#39;: &#39;GAU&#39;,
+  &#39;constraints&#39;: {}}}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+The whole result can then be easily exported to json or inspected through the notebook.</p>
+<p>Here we pull up a molecule and check how many optimisations were performed from different starting conformations. To easily see the links between the individual entries they are automatically colapsed in qcsubmit results.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered"></div>
+</div>
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">result</span><span class="o">.</span><span class="n">collection</span><span class="p">[</span><span class="s2">&quot;CCCCCc1c(c(c(nc1C(C)C)C(C)C)CO)c2ccc(c(c2)CC)F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">n_entries</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+The collections also have some helpful utiltiy functions for processing the results.
+For example a common problem with optimizations is that the connectivity can change so here we can use heuristic distance based rules to work out if the connectivity changed for any of the optimizations.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">result</span><span class="o">.</span><span class="n">collection</span><span class="p">[</span><span class="s2">&quot;CCCCCc1c(c(c(nc1C(C)C)C(C)C)CO)c2ccc(c(c2)CC)F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">detect_connectivity_changes_heuristic</span><span class="p">()</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0: False, 1: False, 2: False, 3: False, 4: False}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+We can also query the lowest energy optimization for the molecule and view the final structure.
+</div>
+</div></p>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 </div>
 </div>
-<div class="codehilite"><pre><span></span><code><span class="c1"># view an optimization</span>
-<span class="n">result</span><span class="o">.</span><span class="n">collection</span><span class="p">[</span><span class="s2">&quot;CO/N=C/1</span><span class="se">\\</span><span class="s2">C[N@](C[C@H]1C[NH3+])c2c(cc3c(=O)c(cn(c3n2)C4CC4)C(=O)[O-])F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">get_final_molecule</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span><span class="o">.</span><span class="n">collection</span><span class="p">[</span><span class="s2">&quot;CCCCCc1c(c(c(nc1C(C)C)C(C)C)CO)c2ccc(c(c2)CC)F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get_lowest_energy_optimisation</span><span class="p">()</span><span class="o">.</span><span class="n">get_final_molecule</span><span class="p">()</span>
 </code></pre></div>
 
 </div>
@@ -650,14 +789,81 @@ Wall time: 1min 14s
 
 
 
-<div id="31c990fe-5105-4093-bd5d-4356d3090f6d"></div>
+<div id="c360d3e6-bf0c-4e09-a8b8-fbe14cb1f892"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#31c990fe-5105-4093-bd5d-4356d3090f6d');
+var element = $('#c360d3e6-bf0c-4e09-a8b8-fbe14cb1f892');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "ebd5ce6a521c4cf2972d9b4b63c72fad", "version_major": 2, "version_minor": 0}
+{"model_id": "53672cb4bc394614b9ec9a34dfe3ce1d", "version_major": 2, "version_minor": 0}
 </script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+A common workflow will involve creating a basic dataset to perform hessian calculations on the final geometries of the molecules, this is easily done by exporting the optimization result to a new basic dataset.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">hessian_dataset</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">create_basic_dataset</span><span class="p">(</span><span class="n">driver</span><span class="o">=</span><span class="s2">&quot;hessian&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
+Now we check the metadata of the dataset and that it has the same specification as the optimization collection but is now a basic Dataset which is ready for submission.
+</div>
+</div></p>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="codehilite"><pre><span></span><code><span class="n">hessian_dataset</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;dataset&quot;</span><span class="p">})</span>
+</code></pre></div>
+
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output" markdown="1">
+
+
+<div class="output_area" markdown="1">
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;dataset_name&#39;: &#39;OpenFF Gen 2 Opt Set 5 Bayer&#39;,
+ &#39;dataset_tagline&#39;: &#39;OpenForcefield single point evaluations.&#39;,
+ &#39;dataset_type&#39;: &#39;BasicDataSet&#39;,
+ &#39;method&#39;: &#39;b3lyp-d3bj&#39;,
+ &#39;basis&#39;: &#39;dzvp&#39;,
+ &#39;program&#39;: &#39;psi4&#39;,
+ &#39;maxiter&#39;: 200,
+ &#39;driver&#39;: &lt;DriverEnum.hessian: &#39;hessian&#39;&gt;,
+ &#39;scf_properties&#39;: [&#39;dipole&#39;,
+  &#39;quadrupole&#39;,
+  &#39;wiberg_lowdin_indices&#39;,
+  &#39;mayer_indices&#39;],
+ &#39;spec_name&#39;: &#39;default&#39;,
+ &#39;spec_description&#39;: &#39;Standard OpenFF optimization quantum chemistry specification.&#39;,
+ &#39;priority&#39;: &#39;normal&#39;,
+ &#39;description&#39;: None,
+ &#39;dataset_tags&#39;: [],
+ &#39;compute_tag&#39;: &#39;openff&#39;,
+ &#39;metadata&#39;: {},
+ &#39;provenance&#39;: {},
+ &#39;filtered_molecules&#39;: {}}</pre>
 </div>
 
 </div>
@@ -673,6 +879,7 @@ var element = $('#31c990fe-5105-4093-bd5d-4356d3090f6d');
 
 </div>
 
+</div>
 </div>
                 
                   
@@ -710,13 +917,13 @@ var element = $('#31c990fe-5105-4093-bd5d-4356d3090f6d');
           </a>
         
         
-          <a href="../factories/" title="Factories" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../creating_workflows/" title="Creating Workflows" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Factories
+                Creating Workflows
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
